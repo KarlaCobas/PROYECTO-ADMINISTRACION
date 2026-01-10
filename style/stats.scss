@@ -1,0 +1,107 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: $shadow;
+    transition: $transition;
+    border: 1px solid rgba($primary, 0.1);
+    position: relative;
+    overflow: hidden;
+    min-height: 140px;
+    
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow-hover;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+    }
+    
+    &:nth-child(1)::before { background: $primary; }
+    &:nth-child(2)::before { background: $accent; }
+    &:nth-child(3)::before { background: $success; }
+    &:nth-child(4)::before { background: $warning; }
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    
+    .stat-card:nth-child(1) & {
+        background: rgba($primary, 0.1);
+        color: $primary;
+    }
+    
+    .stat-card:nth-child(2) & {
+        background: rgba($accent, 0.1);
+        color: $accent;
+    }
+    
+    .stat-card:nth-child(3) & {
+        background: rgba($success, 0.1);
+        color: $success;
+    }
+    
+    .stat-card:nth-child(4) & {
+        background: rgba($warning, 0.1);
+        color: $warning;
+    }
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: $secondary;
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: $gray;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.stat-change {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.positive {
+    color: $success;
+}
+
+.negative {
+    color: $danger;
+}

@@ -1,0 +1,25 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f7ff 100%);
+    color: $secondary;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: $primary;
+    color: white;
+}
+
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}

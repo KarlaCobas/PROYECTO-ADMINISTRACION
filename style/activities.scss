@@ -1,0 +1,102 @@
+.recent-activity {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: $shadow;
+    border: 1px solid rgba($primary, 0.1);
+    transition: $transition;
+    margin-bottom: 2rem;
+    
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.activity-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $secondary;
+}
+
+.view-all {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: $transition;
+    font-size: 0.9rem;
+    
+    &:hover {
+        gap: 0.5rem;
+    }
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.activity-item {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: rgba(241, 245, 249, 0.5);
+    transition: $transition;
+    align-items: flex-start;
+    
+    &:hover {
+        background: rgba($primary, 0.08);
+    }
+}
+
+.activity-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba($primary, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    
+    i {
+        color: $primary;
+        font-size: 0.9rem;
+    }
+}
+
+.activity-content {
+    flex: 1;
+    min-width: 0;
+    
+    .activity-title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    color: $gray;
+    margin-bottom: 0.25rem;
+}
+
+.activity-desc {
+    font-size: 0.85rem;
+    color: $secondary;
+    line-height: 1.4;
+}
