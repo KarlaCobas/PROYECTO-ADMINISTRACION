@@ -3,341 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdminPanel | Panel de Administración</title>
+    <title>Finanzia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <button class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-    <div class="admin-container">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <a href="#dashboard" class="logo">
-                    <span class="logo-text">AdminPanel</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#dashboard" class="nav-link active">
-                        <i class="fas fa-home"></i>
-                        <span class="nav-text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#usuarios" class="nav-link">
-                        <i class="fas fa-users"></i>
-                        <span class="nav-text">Usuarios</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#productos" class="nav-link">
-                        <i class="fas fa-boxes"></i>
-                        <span class="nav-text">Productos</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#reportes" class="nav-link">
-                        <i class="fas fa-chart-line"></i>
-                        <span class="nav-text">Reportes</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#configuracion" class="nav-link">
-                        <i class="fas fa-cog"></i>
-                        <span class="nav-text">Configuración</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#mensajes" class="nav-link">
-                        <i class="fas fa-comments"></i>
-                        <span class="nav-text">Mensajes</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#facturas" class="nav-link">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <span class="nav-text">Facturas</span>
-                    </a>
-                </li>
+    <!-- Header-->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#inicio" class="logo">FINAN<span>ZIA</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#cuentas" class="nav-link">Cuentas</a></li>
+                <li><a href="#ahorros" class="nav-link">Ahorros</a></li>
+                <li><a href="#prestamos" class="nav-link">Préstamos</a></li>
+                <li><a href="#empresas" class="nav-link">Empresas</a></li>
+                <li><a href="#acerca" class="nav-link">Acerca de</a></li>
             </ul>
-        </aside>
+            
+            <div class="nav-actions">
+                <button class="btn btn-login" id="btnLogin">Acceder</button>
+                <button class="btn btn-primary" id="btnOpenAccount">Abrir Cuenta</button>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-        <main class="main-content">
-            <!-- Dashboard Section -->
-            <section id="dashboard">
-                <div class="top-nav">
-                    <h1 class="page-title">Dashboard</h1>
-                    <div class="nav-actions">
-                        <div class="search-box">
-                            <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Buscar...">
-                        </div>
-                        <div class="user-profile">
-                            <div class="avatar">AP</div>
-                            <div class="user-name">AdminPanel</div>
-                        </div>
-                    </div>
-                </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-                <div class="stats-grid">
-                    <div class="stat-card pulse">
-                        <div class="stat-header">
-                            <div>
-                                <div class="stat-value">1,248</div>
-                                <div class="stat-label">Usuarios Totales</div>
-                            </div>
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                        </div>
-                        <div class="stat-change positive">
-                            <i class="fas fa-arrow-up"></i>
-                            <span>12.5% desde el mes pasado</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div>
-                                <div class="stat-value">$24,350</div>
-                                <div class="stat-label">Ingresos Mensuales</div>
-                            </div>
-                            <div class="stat-icon">
-                                <i class="fas fa-dollar-sign"></i>
-                            </div>
-                        </div>
-                        <div class="stat-change positive">
-                            <i class="fas fa-arrow-up"></i>
-                            <span>8.2% desde el mes pasado</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div>
-                                <div class="stat-value">328</div>
-                                <div class="stat-label">Productos Activos</div>
-                            </div>
-                            <div class="stat-icon">
-                                <i class="fas fa-box-open"></i>
-                            </div>
-                        </div>
-                        <div class="stat-change positive">
-                            <i class="fas fa-arrow-up"></i>
-                            <span>5.7% desde el mes pasado</span>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-header">
-                            <div>
-                                <div class="stat-value">98.4%</div>
-                                <div class="stat-label">Satisfacción Usuarios</div>
-                            </div>
-                            <div class="stat-icon">
-                                <i class="fas fa-smile"></i>
-                            </div>
-                        </div>
-                        <div class="stat-change negative">
-                            <i class="fas fa-arrow-down"></i>
-                            <span>1.2% desde el mes pasado</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="data-container">
-                    <div class="chart-card">
-                        <div class="chart-header">
-                            <h2 class="chart-title">Ventas Mensuales</h2>
-                            <div class="chart-actions">
-                                <button><i class="fas fa-ellipsis-h"></i></button>
-                            </div>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="salesChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card">
-                        <div class="chart-header">
-                            <h2 class="chart-title">Tráfico de Usuarios</h2>
-                            <div class="chart-actions">
-                                <button><i class="fas fa-ellipsis-h"></i></button>
-                            </div>
-                        </div>
-                        <div class="chart-container">
-                            <canvas id="trafficChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="recent-activity">
-                    <div class="activity-header">
-                        <h2 class="activity-title">Actividad Reciente</h2>
-                        <a href="#actividad" class="view-all">
-                            Ver todo <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="activity-list">
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fas fa-user-plus"></i>
-                            </div>
-                            <div class="activity-content">
-                                <div class="activity-title">Nuevo usuario registrado</div>
-                                <div class="activity-time">Hace 15 minutos</div>
-                                <div class="activity-desc">Carlos Rodríguez se unió a la plataforma</div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                            <div class="activity-content">
-                                <div class="activity-title">Nueva venta realizada</div>
-                                <div class="activity-time">Hace 45 minutos</div>
-                                <div class="activity-desc">Producto Premium vendido a María López</div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fas fa-comment"></i>
-                            </div>
-                            <div class="activity-content">
-                                <div class="activity-title">Nuevo mensaje recibido</div>
-                                <div class="activity-time">Hace 2 horas</div>
-                                <div class="activity-desc">Consulta sobre características del servicio</div>
-                            </div>
-                        </div>
-                        <div class="activity-item">
-                            <div class="activity-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="activity-content">
-                                <div class="activity-title">Nueva reseña publicada</div>
-                                <div class="activity-time">Hace 3 horas</div>
-                                <div class="activity-desc">Juan Pérez calificó el servicio con 5 estrellas</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Secciones adicionales -->
-            <section id="usuarios" class="section-container">
-                <h2 class="section-title">Gestión de Usuarios</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Usuarios Activos</h3>
-                        <p>1,248 usuarios registrados en la plataforma</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Nuevos Registros</h3>
-                        <p>45 nuevos usuarios este mes</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Actividad Usuarios</h3>
-                        <p>85% de usuarios activos diariamente</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="productos" class="section-container">
-                <h2 class="section-title">Gestión de Productos</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Productos Activos</h3>
-                        <p>328 productos en el catálogo</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Inventario</h3>
-                        <p>95% de productos disponibles</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Productos Destacados</h3>
-                        <p>12 productos en promoción</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="reportes" class="section-container">
-                <h2 class="section-title">Reportes y Análisis</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Ventas Diarias</h3>
-                        <p>Reporte detallado de ventas del día</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Análisis de Usuarios</h3>
-                        <p>Comportamiento y preferencias de usuarios</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Reportes Personalizados</h3>
-                        <p>Genera reportes según tus necesidades</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="configuracion" class="section-container">
-                <h2 class="section-title">Configuración del Sistema</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Ajustes Generales</h3>
-                        <p>Configuración básica del sistema</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Seguridad</h3>
-                        <p>Configuración de permisos y acceso</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Integraciones</h3>
-                        <p>Conexiones con otras plataformas</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="mensajes" class="section-container">
-                <h2 class="section-title">Mensajes y Comunicación</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Mensajes Recibidos</h3>
-                        <p>15 mensajes sin responder</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Notificaciones</h3>
-                        <p>Configuración de alertas y notificaciones</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Soporte</h3>
-                        <p>Sistema de tickets de soporte</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="facturas" class="section-container">
-                <h2 class="section-title">Gestión de Facturas</h2>
-                <div class="section-content">
-                    <div class="section-item">
-                        <h3>Facturas Pendientes</h3>
-                        <p>8 facturas por procesar</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Historial Facturas</h3>
-                        <p>Registro completo de todas las facturas</p>
-                    </div>
-                    <div class="section-item">
-                        <h3>Generar Facturas</h3>
-                        <p>Crea nuevas facturas automáticamente</p>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-title">Finanzia</div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-list">
+                <li class="mobile-nav-item"><a href="#cuentas" class="mobile-nav-link">Cuentas</a></li>
+                <li class="mobile-nav-item"><a href="#ahorros" class="mobile-nav-link">Ahorros</a></li>
+                <li class="mobile-nav-item"><a href="#prestamos" class="mobile-nav-link">Préstamos</a></li>
+                <li class="mobile-nav-item"><a href="#empresas" class="mobile-nav-link">Empresas</a></li>
+                <li class="mobile-nav-item"><a href="#acerca" class="mobile-nav-link">Acerca de</a></li>
+            </ul>
+            
+            <div class="mobile-menu-actions">
+                <button class="btn btn-login" id="mobileBtnLogin">Acceder</button>
+                <button class="btn btn-primary" id="mobileBtnOpenAccount">Abrir Cuenta</button>
+            </div>
+        </div>
     </div>
 
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Bienvenido a Finanzia: ahorros que trabajan tan duro como tú</h1>
+            <p class="hero-subtitle">
+                Con tasas <span class="highlight">10 veces superiores</span> al promedio nacional, 
+                nuestra Cuenta de Ahorro de Alto Rendimiento hará que tu dinero llegue más lejos.*
+            </p>
+            <div class="cta-container">
+                <button class="btn btn-primary" id="heroBtnStart">
+                    Comenzar ahora
+                </button>
+                <button class="btn btn-login" id="heroBtnDemo">
+                    <i class="fas fa-play-circle"></i> Ver demostración
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuentas Section -->
+    <section class="section" id="cuentas">
+        <h2 class="section-title">Cuentas a tu medida</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-piggy-bank"></i>
+                </div>
+                <h3>Cuenta de Ahorro de Alto Rendimiento</h3>
+                <p>Disfruta de tasas de interés competitivas que hacen que tu dinero crezca más rápido sin esfuerzo adicional de tu parte.</p>
+                <a href="#ahorros" class="feature-link">
+                    Ver tasas actuales <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>Cuenta Corriente sin Comisiones</h3>
+                <p>Olvídate de las comisiones mensuales, de mantenimiento o por transferencias. Tu dinero trabaja completamente para ti.</p>
+                <a href="#cuentas" class="feature-link">
+                    Abrir cuenta <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Protección FDIC garantizada</h3>
+                <p>Tus depósitos están asegurados por la FDIC hasta $250,000 por depositante, ofreciéndote tranquilidad y seguridad total.</p>
+                <a href="#seguridad" class="feature-link">
+                    Más sobre seguridad <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ahorros Section -->
+    <section class="section" id="ahorros">
+        <h2 class="section-title">Ahorros Inteligentes</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Tasas Competitivas</h3>
+                <p>Obtén tasas 10 veces superiores al promedio nacional con nuestra cuenta de ahorro de alto rendimiento.</p>
+                <a href="#cuentas" class="feature-link">
+                    Comparar tasas <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Metas de Ahorro</h3>
+                <p>Establece y alcanza tus metas financieras con nuestras herramientas de planificación de ahorros.</p>
+                <a href="#ahorros" class="feature-link">
+                    Configurar metas <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Ahorro Automático</h3>
+                <p>Programa transferencias automáticas y haz que el ahorro sea un hábito sin esfuerzo.</p>
+                <a href="#ahorros" class="feature-link">
+                    Programar ahorro <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Préstamos Section -->
+    <section class="section" id="prestamos">
+        <h2 class="section-title">Préstamos Flexibles</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Préstamos Personales</h3>
+                <p>Financia tus proyectos personales con tasas competitivas y plazos flexibles adaptados a tus necesidades.</p>
+                <a href="#prestamos" class="feature-link">
+                    Solicitar préstamo <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>Préstamos para Automóviles</h3>
+                <p>Adquiere el vehículo que necesitas con nuestras opciones de financiamiento vehicular.</p>
+                <a href="#prestamos" class="feature-link">
+                    Calcular financiamiento <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Préstamos Educativos</h3>
+                <p>Invierte en tu educación o la de tus seres queridos con nuestras opciones de crédito educativo.</p>
+                <a href="#prestamos" class="feature-link">
+                    Información educativa <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empresas Section -->
+    <section class="section" id="empresas">
+        <h2 class="section-title">Soluciones para Empresas</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3>Cuentas Corporativas</h3>
+                <p>Gestiona las finanzas de tu empresa con nuestras cuentas empresariales diseñadas para el crecimiento.</p>
+                <a href="#empresas" class="feature-link">
+                    Soluciones empresariales <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3>Tarjetas de Crédito Empresariales</h3>
+                <p>Controla los gastos de tu empresa con nuestras tarjetas de crédito corporativas con beneficios exclusivos.</p>
+                <a href="#empresas" class="feature-link">
+                    Solicitar tarjeta <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Servicios de Nómina</h3>
+                <p>Simplifica el pago a tus empleados con nuestro sistema de nómina integrado y automatizado.</p>
+                <a href="#empresas" class="feature-link">
+                    Información de nómina <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seguridad Section -->
+    <section class="section" id="seguridad">
+        <h2 class="section-title">Protegiéndote a ti y a tu dinero</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <h3>Autenticación biométrica avanzada</h3>
+                <p>Transforma tu rostro o huella digital en las llaves de tu cuenta con nuestro proceso de autenticación de última generación.</p>
+                <a href="#seguridad" class="feature-link">
+                    Configurar biometría <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Seguridad líder en la industria</h3>
+                <p>Nada es más importante que la seguridad de tu dinero e información. Ofrecemos protección de nivel bancario desde el primer día.</p>
+                <a href="#seguridad" class="feature-link">
+                    Medidas de seguridad <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Dispositivos de confianza verificados</h3>
+                <p>Registra tus dispositivos personales para un acceso aún más seguro y conveniente a tu cuenta bancaria.</p>
+                <a href="#seguridad" class="feature-link">
+                    Gestionar dispositivos <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de Section -->
+    <section class="section stats" id="acerca">
+        <h2 class="section-title">Acerca de Finanzia</h2>
+        <div class="feature-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <div class="stat-number">100,000+</div>
+            <p class="stat-label">Clientes confían en Finanzia</p>
+            <p style="margin-top: 1rem; color: var(--medium-gray); line-height: 1.7;">
+                Sabemos que confiar tu dinero a alguien es una gran decisión, y no nos la tomamos a la ligera. 
+                De hecho, es por eso que creamos una experiencia bancaria más inteligente, simple y segura que nunca.
+                Finanzia combina innovación tecnológica con años de experiencia en servicios financieros.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="preguntas-frecuentes">
+        <h2 class="section-title">¿Tienes preguntas? Tenemos respuestas claras</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo abro una cuenta en Finanzia?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Abrir una cuenta es rápido y sencillo. Solo necesitas descargar nuestra aplicación, proporcionar información básica y realizar un depósito inicial mínimo de $500. Todo el proceso toma menos de 10 minutos y puedes hacerlo desde la comodidad de tu hogar.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Cómo cambio mi contraseña o datos de acceso?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Puedes cambiar tu contraseña en cualquier momento desde la sección de Configuración de la aplicación o sitio web. Te enviaremos un código de verificación a tu correo o teléfono para confirmar tu identidad. También puedes configurar autenticación biométrica para mayor comodidad.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Dónde contacto al servicio al cliente?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Nuestro equipo de servicio al cliente está disponible 24/7 a través del chat en la aplicación, por teléfono al 1-800-FINANZIA, o por correo electrónico a soporte@finanzia.com. También tenemos una extensa sección de ayuda en línea con respuestas a las preguntas más frecuentes.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Finanzia es seguro y confiable?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, Finanzia utiliza tecnología de encriptación de grado bancario, autenticación multifactor y está respaldado por instituciones financieras sólidas, con todas las cuentas aseguradas por la FDIC hasta $250,000 por depositante. Tu seguridad es nuestra máxima prioridad.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Hay comisiones ocultas?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>No, en Finanzia creemos en la transparencia total. No hay comisiones mensuales, de mantenimiento, por transferencias o por retiros. Solo pagas por servicios adicionales específicos que solicites expresamente.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>¿Puedo acceder a mi cuenta desde el extranjero?</h3>
+                    <div class="faq-toggle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí, puedes acceder a tu cuenta desde cualquier parte del mundo a través de nuestra aplicación móvil o sitio web. Sin embargo, te recomendamos notificarnos antes de viajar para evitar posibles bloqueos de seguridad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Finanzia</h3>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem; line-height: 1.6;">
+                    Donde la innovación financiera se encuentra con la confianza y seguridad que mereces.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Productos</h3>
+                <ul class="footer-links">
+                    <li><a href="#cuentas">Cuentas</a></li>
+                    <li><a href="#ahorros">Ahorros</a></li>
+                    <li><a href="#prestamos">Préstamos</a></li>
+                    <li><a href="#empresas">Empresas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul class="footer-links">
+                    <li><a href="#preguntas-frecuentes">Centro de Ayuda</a></li>
+                    <li><a href="#cuentas">Tarifas y Comisiones</a></li>
+                    <li><a href="#seguridad">Seguridad</a></li>
+                    <li><a href="#acerca">Acerca de</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="#legal-terminos">Términos y Condiciones</a></li>
+                    <li><a href="#legal-privacidad">Política de Privacidad</a></li>
+                    <li><a href="#legal-divulgaciones">Divulgaciones</a></li>
+                    <li><a href="#seguridad">Información FDIC</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>*La comparación se basa en el promedio nacional para productos de ahorro publicado por la FDIC (0.39% al 15 de diciembre de 2025).</p>
+            <p style="margin-top: 1rem;">Las tasas de interés y los APY mostrados son precisos y efectivos a partir de las 12:01 AM hora del Este de hoy. Los productos y tasas pueden variar y están sujetos a cambios sin previo aviso.</p>
+            <p style="margin-top: 1.5rem;">© 2026 Finanzia. Todos los derechos reservados. Miembro FDIC.</p>
+        </div>
+    </footer>
+
     <script src="JavaScript/main.js"></script>
-    <script src="JavaScript/charts.js"></script>
 </body>
 </html>
