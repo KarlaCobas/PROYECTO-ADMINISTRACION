@@ -1,0 +1,84 @@
+.features {
+    padding: $spacing-xxxl $spacing-md;
+    max-width: $breakpoint-large;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: $spacing-xxl;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: $text-color;
+        margin-bottom: $spacing-sm;
+    }
+
+    p {
+        font-size: 18px;
+        color: $text-light;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-lg;
+}
+
+.feature-card {
+    background-color: $white;
+    border-radius: 8px;
+    padding: $spacing-lg;
+    box-shadow: $shadow-medium;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-dark;
+    }
+}
+
+.feature-icon {
+    background-color: $background-blue;
+    color: $primary-color;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: $spacing-md;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: $spacing-sm;
+    color: $text-color;
+}
+
+.feature-card p {
+    color: $text-light;
+    margin-bottom: $spacing-md;
+}
+
+.feature-link {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+
+    i {
+        margin-left: 5px;
+        transition: transform 0.3s;
+    }
+
+    &:hover i {
+        transform: translateX(5px);
+    }
+}

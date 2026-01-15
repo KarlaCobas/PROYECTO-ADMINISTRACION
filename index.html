@@ -3,422 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanzia</title>
+    <title>OpenBank - Banking Made Easy</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    <!-- Header-->
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#inicio" class="logo">FINAN<span>ZIA</span></a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#cuentas" class="nav-link">Cuentas</a></li>
-                <li><a href="#ahorros" class="nav-link">Ahorros</a></li>
-                <li><a href="#prestamos" class="nav-link">Préstamos</a></li>
-                <li><a href="#empresas" class="nav-link">Empresas</a></li>
-                <li><a href="#acerca" class="nav-link">Acerca de</a></li>
-            </ul>
-            
-            <div class="nav-actions">
-                <button class="btn btn-login" id="btnLogin">Acceder</button>
-                <button class="btn btn-primary" id="btnOpenAccount">Abrir Cuenta</button>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-university"></i>
+                OpenBank
             </div>
             
-            <button class="menu-toggle" id="menuToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
-    <div class="mobile-nav-menu" id="mobileNavMenu">
-        <div class="mobile-nav-header">
-            <div class="mobile-nav-title">Finanzia</div>
-            <button class="mobile-nav-close" id="mobileNavClose">
-                <i class="fas fa-times"></i>
-            </button>
+            <ul class="nav-links">
+                <li><a href="#">Personal</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            
+            <div class="header-buttons">
+                <button class="btn-login">Log In</button>
+                <button class="btn-signup">Sign Up</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
         
-        <div class="mobile-nav-content">
-            <ul class="mobile-nav-list">
-                <li class="mobile-nav-item"><a href="#cuentas" class="mobile-nav-link">Cuentas</a></li>
-                <li class="mobile-nav-item"><a href="#ahorros" class="mobile-nav-link">Ahorros</a></li>
-                <li class="mobile-nav-item"><a href="#prestamos" class="mobile-nav-link">Préstamos</a></li>
-                <li class="mobile-nav-item"><a href="#empresas" class="mobile-nav-link">Empresas</a></li>
-                <li class="mobile-nav-item"><a href="#acerca" class="mobile-nav-link">Acerca de</a></li>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#">Personal</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#" class="btn-login-mobile">Log In</a></li>
+                <li><a href="#" class="btn-signup-mobile">Sign Up</a></li>
             </ul>
-            
-            <div class="mobile-menu-actions">
-                <button class="btn btn-login" id="mobileBtnLogin">Acceder</button>
-                <button class="btn btn-primary" id="mobileBtnOpenAccount">Abrir Cuenta</button>
-            </div>
         </div>
-    </div>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Bienvenido a Finanzia: ahorros que trabajan tan duro como tú</h1>
-            <p class="hero-subtitle">
-                Con tasas <span class="highlight">10 veces superiores</span> al promedio nacional, 
-                nuestra Cuenta de Ahorro de Alto Rendimiento hará que tu dinero llegue más lejos.*
-            </p>
-            <div class="cta-container">
-                <button class="btn btn-primary" id="heroBtnStart">
-                    Comenzar ahora
-                </button>
-                <button class="btn btn-login" id="heroBtnDemo">
-                    <i class="fas fa-play-circle"></i> Ver demostración
-                </button>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Banking made easy, for everyone</h1>
+                <p>OpenBank offers modern banking solutions with no hidden fees, high-yield savings, and a user-friendly mobile app.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        <i class="fas fa-user-plus" style="margin-right: 8px;"></i> Open an Account
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-mobile-alt" style="margin-right: 8px;"></i> Download the App
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="OpenBank Mobile App">
             </div>
         </div>
     </section>
 
-    <!-- Cuentas Section -->
-    <section class="section" id="cuentas">
-        <h2 class="section-title">Cuentas a tu medida</h2>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose OpenBank?</h2>
+            <p>We're changing the way people think about banking with transparent pricing and innovative features.</p>
+        </div>
+        
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-piggy-bank"></i>
+                    <i class="fas fa-percentage"></i>
                 </div>
-                <h3>Cuenta de Ahorro de Alto Rendimiento</h3>
-                <p>Disfruta de tasas de interés competitivas que hacen que tu dinero crezca más rápido sin esfuerzo adicional de tu parte.</p>
-                <a href="#ahorros" class="feature-link">
-                    Ver tasas actuales <i class="fas fa-arrow-right"></i>
-                </a>
+                <h3>No Hidden Fees</h3>
+                <p>No monthly fees, no minimum balance fees, and no overdraft fees. We believe in transparent banking.</p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-university"></i>
+                    <i class="fas fa-piggy-bank"></i>
                 </div>
-                <h3>Cuenta Corriente sin Comisiones</h3>
-                <p>Olvídate de las comisiones mensuales, de mantenimiento o por transferencias. Tu dinero trabaja completamente para ti.</p>
-                <a href="#cuentas" class="feature-link">
-                    Abrir cuenta <i class="fas fa-arrow-right"></i>
-                </a>
+                <h3>High-Yield Savings</h3>
+                <p>Earn up to 5x the national average with our high-yield savings accounts and CDs.</p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
             
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-shield-alt"></i>
                 </div>
-                <h3>Protección FDIC garantizada</h3>
-                <p>Tus depósitos están asegurados por la FDIC hasta $250,000 por depositante, ofreciéndote tranquilidad y seguridad total.</p>
-                <a href="#seguridad" class="feature-link">
-                    Más sobre seguridad <i class="fas fa-arrow-right"></i>
-                </a>
+                <h3>Top Security</h3>
+                <p>Your money is safe with us. We use bank-level encryption and security measures to protect your accounts.</p>
+                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Ahorros Section -->
-    <section class="section" id="ahorros">
-        <h2 class="section-title">Ahorros Inteligentes</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <h3>Tasas Competitivas</h3>
-                <p>Obtén tasas 10 veces superiores al promedio nacional con nuestra cuenta de ahorro de alto rendimiento.</p>
-                <a href="#cuentas" class="feature-link">
-                    Comparar tasas <i class="fas fa-arrow-right"></i>
-                </a>
+    <!-- Banking Section -->
+    <section class="banking">
+        <div class="banking-container">
+            <div class="banking-content">
+                <h2>Modern Banking Solutions</h2>
+                <p>From everyday spending to long-term savings, we have the right accounts for your financial needs.</p>
+                
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> <span>Free checking and savings accounts</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Early direct deposit up to 2 days earlier</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>55,000+ fee-free ATMs nationwide</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>24/7 customer support via chat, phone, or email</span></li>
+                </ul>
+                
+                <button class="btn-primary">
+                    Explore Our Accounts <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </button>
             </div>
             
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-bullseye"></i>
-                </div>
-                <h3>Metas de Ahorro</h3>
-                <p>Establece y alcanza tus metas financieras con nuestras herramientas de planificación de ahorros.</p>
-                <a href="#ahorros" class="feature-link">
-                    Configurar metas <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h3>Ahorro Automático</h3>
-                <p>Programa transferencias automáticas y haz que el ahorro sea un hábito sin esfuerzo.</p>
-                <a href="#ahorros" class="feature-link">
-                    Programar ahorro <i class="fas fa-arrow-right"></i>
-                </a>
+            <div class="banking-image">
+                Modern Banking Experience
             </div>
         </div>
     </section>
 
-    <!-- Préstamos Section -->
-    <section class="section" id="prestamos">
-        <h2 class="section-title">Préstamos Flexibles</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3>Préstamos Personales</h3>
-                <p>Financia tus proyectos personales con tasas competitivas y plazos flexibles adaptados a tus necesidades.</p>
-                <a href="#prestamos" class="feature-link">
-                    Solicitar préstamo <i class="fas fa-arrow-right"></i>
-                </a>
+    <!-- App Section -->
+    <section class="app-section">
+        <div class="app-container">
+            <div class="app-image">
+                Mobile Banking App
             </div>
             
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-car"></i>
-                </div>
-                <h3>Préstamos para Automóviles</h3>
-                <p>Adquiere el vehículo que necesitas con nuestras opciones de financiamiento vehicular.</p>
-                <a href="#prestamos" class="feature-link">
-                    Calcular financiamiento <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h3>Préstamos Educativos</h3>
-                <p>Invierte en tu educación o la de tus seres queridos con nuestras opciones de crédito educativo.</p>
-                <a href="#prestamos" class="feature-link">
-                    Información educativa <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Empresas Section -->
-    <section class="section" id="empresas">
-        <h2 class="section-title">Soluciones para Empresas</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3>Cuentas Corporativas</h3>
-                <p>Gestiona las finanzas de tu empresa con nuestras cuentas empresariales diseñadas para el crecimiento.</p>
-                <a href="#empresas" class="feature-link">
-                    Soluciones empresariales <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <h3>Tarjetas de Crédito Empresariales</h3>
-                <p>Controla los gastos de tu empresa con nuestras tarjetas de crédito corporativas con beneficios exclusivos.</p>
-                <a href="#empresas" class="feature-link">
-                    Solicitar tarjeta <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3>Servicios de Nómina</h3>
-                <p>Simplifica el pago a tus empleados con nuestro sistema de nómina integrado y automatizado.</p>
-                <a href="#empresas" class="feature-link">
-                    Información de nómina <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seguridad Section -->
-    <section class="section" id="seguridad">
-        <h2 class="section-title">Protegiéndote a ti y a tu dinero</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-fingerprint"></i>
-                </div>
-                <h3>Autenticación biométrica avanzada</h3>
-                <p>Transforma tu rostro o huella digital en las llaves de tu cuenta con nuestro proceso de autenticación de última generación.</p>
-                <a href="#seguridad" class="feature-link">
-                    Configurar biometría <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <h3>Seguridad líder en la industria</h3>
-                <p>Nada es más importante que la seguridad de tu dinero e información. Ofrecemos protección de nivel bancario desde el primer día.</p>
-                <a href="#seguridad" class="feature-link">
-                    Medidas de seguridad <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h3>Dispositivos de confianza verificados</h3>
-                <p>Registra tus dispositivos personales para un acceso aún más seguro y conveniente a tu cuenta bancaria.</p>
-                <a href="#seguridad" class="feature-link">
-                    Gestionar dispositivos <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Acerca de Section -->
-    <section class="section stats" id="acerca">
-        <h2 class="section-title">Acerca de Finanzia</h2>
-        <div class="feature-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-            <div class="stat-number">100,000+</div>
-            <p class="stat-label">Clientes confían en Finanzia</p>
-            <p style="margin-top: 1rem; color: var(--medium-gray); line-height: 1.7;">
-                Sabemos que confiar tu dinero a alguien es una gran decisión, y no nos la tomamos a la ligera. 
-                De hecho, es por eso que creamos una experiencia bancaria más inteligente, simple y segura que nunca.
-                Finanzia combina innovación tecnológica con años de experiencia en servicios financieros.
-            </p>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section" id="preguntas-frecuentes">
-        <h2 class="section-title">¿Tienes preguntas? Tenemos respuestas claras</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Cómo abro una cuenta en Finanzia?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>Abrir una cuenta es rápido y sencillo. Solo necesitas descargar nuestra aplicación, proporcionar información básica y realizar un depósito inicial mínimo de $500. Todo el proceso toma menos de 10 minutos y puedes hacerlo desde la comodidad de tu hogar.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Cómo cambio mi contraseña o datos de acceso?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>Puedes cambiar tu contraseña en cualquier momento desde la sección de Configuración de la aplicación o sitio web. Te enviaremos un código de verificación a tu correo o teléfono para confirmar tu identidad. También puedes configurar autenticación biométrica para mayor comodidad.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Dónde contacto al servicio al cliente?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>Nuestro equipo de servicio al cliente está disponible 24/7 a través del chat en la aplicación, por teléfono al 1-800-FINANZIA, o por correo electrónico a soporte@finanzia.com. También tenemos una extensa sección de ayuda en línea con respuestas a las preguntas más frecuentes.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Finanzia es seguro y confiable?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>Sí, Finanzia utiliza tecnología de encriptación de grado bancario, autenticación multifactor y está respaldado por instituciones financieras sólidas, con todas las cuentas aseguradas por la FDIC hasta $250,000 por depositante. Tu seguridad es nuestra máxima prioridad.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Hay comisiones ocultas?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>No, en Finanzia creemos en la transparencia total. No hay comisiones mensuales, de mantenimiento, por transferencias o por retiros. Solo pagas por servicios adicionales específicos que solicites expresamente.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>¿Puedo acceder a mi cuenta desde el extranjero?</h3>
-                    <div class="faq-toggle">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                </div>
-                <div class="faq-answer">
-                    <p>Sí, puedes acceder a tu cuenta desde cualquier parte del mundo a través de nuestra aplicación móvil o sitio web. Sin embargo, te recomendamos notificarnos antes de viajar para evitar posibles bloqueos de seguridad.</p>
+            <div class="app-content">
+                <h2>Banking at your fingertips</h2>
+                <p>Manage your money anytime, anywhere with our award-winning mobile app. Check balances, transfer money, pay bills, and deposit checks with just a few taps.</p>
+                
+                <div class="app-stores">
+                    <button class="app-store-btn">
+                        <i class="fab fa-apple"></i>
+                        <div class="store-text">
+                            <span>Download on the</span>
+                            <span>App Store</span>
+                        </div>
+                    </button>
+                    
+                    <button class="app-store-btn">
+                        <i class="fab fa-google-play"></i>
+                        <div class="store-text">
+                            <span>Get it on</span>
+                            <span>Google Play</span>
+                        </div>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Finanzia</h3>
-                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1.5rem; line-height: 1.6;">
-                    Donde la innovación financiera se encuentra con la confianza y seguridad que mereces.
-                </p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>OpenBank</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Accounts</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Checking</a></li>
+                        <li><a href="#">Savings</a></li>
+                        <li><a href="#">CDs</a></li>
+                        <li><a href="#">IRAs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mobile Banking</a></li>
+                        <li><a href="#">Online Banking</a></li>
+                        <li><a href="#">Bill Pay</a></li>
+                        <li><a href="#">Zelle®</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Disclosures</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h3>Productos</h3>
-                <ul class="footer-links">
-                    <li><a href="#cuentas">Cuentas</a></li>
-                    <li><a href="#ahorros">Ahorros</a></li>
-                    <li><a href="#prestamos">Préstamos</a></li>
-                    <li><a href="#empresas">Empresas</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <i class="fas fa-university"></i> OpenBank
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+                <div class="copyright">
+                    &copy; 2023 OpenBank. All rights reserved. OpenBank is a registered trademark. Banking services provided by OpenBank, Member FDIC.
+                </div>
             </div>
-            
-            <div class="footer-section">
-                <h3>Recursos</h3>
-                <ul class="footer-links">
-                    <li><a href="#preguntas-frecuentes">Centro de Ayuda</a></li>
-                    <li><a href="#cuentas">Tarifas y Comisiones</a></li>
-                    <li><a href="#seguridad">Seguridad</a></li>
-                    <li><a href="#acerca">Acerca de</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="#legal-terminos">Términos y Condiciones</a></li>
-                    <li><a href="#legal-privacidad">Política de Privacidad</a></li>
-                    <li><a href="#legal-divulgaciones">Divulgaciones</a></li>
-                    <li><a href="#seguridad">Información FDIC</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>*La comparación se basa en el promedio nacional para productos de ahorro publicado por la FDIC (0.39% al 15 de diciembre de 2025).</p>
-            <p style="margin-top: 1rem;">Las tasas de interés y los APY mostrados son precisos y efectivos a partir de las 12:01 AM hora del Este de hoy. Los productos y tasas pueden variar y están sujetos a cambios sin previo aviso.</p>
-            <p style="margin-top: 1.5rem;">© 2026 Finanzia. Todos los derechos reservados. Miembro FDIC.</p>
         </div>
     </footer>
 
-    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+body {
+    background-color: $background-light;
+    color: $text-color;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: $breakpoint-large;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
+
+button {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

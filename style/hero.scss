@@ -1,0 +1,102 @@
+.hero {
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: $white;
+    padding: $spacing-xxxl $spacing-md;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: $breakpoint-large;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xl;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        animation: float 3s ease-in-out infinite;
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: $spacing-lg;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: $white;
+    color: $primary-color;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: $background-blue;
+        transform: translateY(-2px);
+        box-shadow: $shadow-button;
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid rgba($white, 0.3);
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba($white, 0.1);
+        transform: translateY(-2px);
+    }
+}
