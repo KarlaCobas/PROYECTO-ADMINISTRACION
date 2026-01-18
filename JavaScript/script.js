@@ -211,3 +211,30 @@
                 }
             }, 250);
         });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.logo img');
+    if (logo) {
+        logo.style.height = '34px';
+        logo.style.width = 'auto';
+        logo.style.maxHeight = '34px';
+        
+        if (window.innerWidth <= 767) {
+            logo.style.height = '35px';
+            logo.style.maxHeight = '35px';
+        }
+    }
+});
+
+window.addEventListener('resize', function() {
+    const logo = document.querySelector('.logo img');
+    if (logo) {
+        if (window.innerWidth <= 767) {
+            logo.style.height = '34px';
+            logo.style.maxHeight = '34px';
+        } else {
+            logo.style.height = '34px';
+            logo.style.maxHeight = '34px';
+        }
+    }
+});
