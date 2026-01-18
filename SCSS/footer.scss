@@ -1,0 +1,114 @@
+@use 'variables' as v;
+
+/* FOOTER MODIFICADO */
+footer {
+    background-color: v.$black;
+    color: v.$white;
+    padding: 40px 20px 30px;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 40px 16px 25px;
+    }
+}
+
+.footer-container {
+    max-width: v.$container-max-width;
+    margin: 0 auto;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        gap: 15px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: v.$font-weight-bold;
+    color: v.$white;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+        max-height: 30px;
+        width: auto;
+        display: block;
+
+        @media (max-width: v.$breakpoint-lg) {
+            max-height: 25px;
+        }
+
+        @media (max-width: v.$breakpoint-md) {
+            max-height: 22px;
+        }
+    }
+}
+
+.footer-links-row {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-left: 0;
+    padding-left: 0;
+
+    @media (max-width: v.$breakpoint-lg) {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 14px;
+        transition: color v.$transition-normal;
+        white-space: nowrap;
+
+        @media (max-width: v.$breakpoint-md) {
+            font-size: 13px;
+        }
+
+        &:hover {
+            color: v.$white;
+        }
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding-top: 20px;
+        font-size: 13px;
+        text-align: left;
+    }
+}

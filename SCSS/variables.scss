@@ -1,0 +1,45 @@
+// Variables de color
+$primary-red: rgb(224, 0, 0);
+$secondary-red: rgb(180, 0, 0);
+$accent-red: rgba(224, 0, 0, 0.1);
+$white: #FFFFFF;
+$gray-light: #F5F7FA;
+$gray-medium: #6C757D;
+$gray-dark: #343A40;
+$black: #000000;
+$success-green: #28A745;
+
+// Breakpoints
+$breakpoint-xxl: 1199px;
+$breakpoint-lg: 1023px;
+$breakpoint-md: 767px;
+$breakpoint-sm: 480px;
+$breakpoint-xs: 360px;
+
+// Fuentes
+$font-family: 'Inter', sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+// Tamaños de contenedor
+$container-max-width: 1200px;
+$container-padding: 20px;
+$container-padding-mobile: 16px;
+
+// Alturas
+$header-height: 70px;
+$header-height-mobile: 65px;
+$image-height: 350px;
+$image-height-tablet: 300px;
+$image-height-mobile: 250px;
+$image-height-small: 220px;
+$image-height-xs: 200px;
+
+// Transiciones
+$transition-normal: 0.3s ease;
+$transition-slow: 3s ease;
+$transition-fast: 0.15s ease;

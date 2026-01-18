@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFF;
+  color: #343A40;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-spacer {
+  height: 70px;
+}
+@media (max-width: 767px) {
+  .content-spacer {
+    height: 65px;
+  }
+}/*# sourceMappingURL=base.css.map */

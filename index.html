@@ -1,232 +1,247 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenBank - Banking Made Easy</title>
+    <title>Openbank by Santander | Online Banking</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="SCSS/main.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
+    <!-- HEADER -->
+    <header id="mainHeader">
         <div class="header-container">
-            <div class="logo">
-                <i class="fas fa-university"></i>
-                OpenBank
-            </div>
-            
+            <a href="#" class="logo">
+                <img src="assets/logo.svg" alt="Openbank by Santander" class="logo-svg">
+            </a>
+
             <ul class="nav-links">
-                <li><a href="#">Personal</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
-            
+
             <div class="header-buttons">
-                <button class="btn-login">Log In</button>
-                <button class="btn-signup">Sign Up</button>
-                <button class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <button class="btn btn-login">Log In</button>
+                <button class="btn btn-signup">Open Account</button>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <ul>
-                <li><a href="#">Personal</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#" class="btn-login-mobile">Log In</a></li>
-                <li><a href="#" class="btn-signup-mobile">Sign Up</a></li>
-            </ul>
+
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Overlay y menú móvil -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <img src="assets/logo-openbank.png" alt="Openbank">
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu-content">
+            <div class="mobile-links-container">
+                <div class="mobile-links-row">
+                    <div class="mobile-link-item">
+                        <a href="#">Personal</a>
+                    </div>
+                    <div class="mobile-link-item">
+                        <a href="#">Business</a>
+                    </div>
+                </div>
+                <div class="mobile-link-item mobile-link-single">
+                    <a href="#">About Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <button class="btn btn-signup">Open an Account</button>
+            <button class="btn btn-login">Sign In</button>
+        </div>
+    </div>
+
+    <div class="content-spacer"></div>
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-container">
+            <div class="hero-image-container">
+                <div class="hero-image">
+                    <img src="assets/UUID.avif" alt="Openbank Mobile App Interface">
+                </div>
+            </div>
+
             <div class="hero-content">
-                <h1>Banking made easy, for everyone</h1>
-                <p>OpenBank offers modern banking solutions with no hidden fees, high-yield savings, and a user-friendly mobile app.</p>
+                <h1>Welcome to Openbank – and to savings that work as hard as you do.</h1>
+                <p class="hero-subtitle">With rates <strong>10x</strong> the national average, our High Yield Savings
+                    account will take your money further.*</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary">
-                        <i class="fas fa-user-plus" style="margin-right: 8px;"></i> Open an Account
-                    </button>
-                    <button class="btn-secondary">
-                        <i class="fas fa-mobile-alt" style="margin-right: 8px;"></i> Download the App
-                    </button>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="OpenBank Mobile App">
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="section-title">
-            <h2>Why Choose OpenBank?</h2>
-            <p>We're changing the way people think about banking with transparent pricing and innovative features.</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-percentage"></i>
-                </div>
-                <h3>No Hidden Fees</h3>
-                <p>No monthly fees, no minimum balance fees, and no overdraft fees. We believe in transparent banking.</p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-piggy-bank"></i>
-                </div>
-                <h3>High-Yield Savings</h3>
-                <p>Earn up to 5x the national average with our high-yield savings accounts and CDs.</p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <h3>Top Security</h3>
-                <p>Your money is safe with us. We use bank-level encryption and security measures to protect your accounts.</p>
-                <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banking Section -->
-    <section class="banking">
-        <div class="banking-container">
-            <div class="banking-content">
-                <h2>Modern Banking Solutions</h2>
-                <p>From everyday spending to long-term savings, we have the right accounts for your financial needs.</p>
-                
-                <ul class="benefits-list">
-                    <li><i class="fas fa-check-circle"></i> <span>Free checking and savings accounts</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span>Early direct deposit up to 2 days earlier</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span>55,000+ fee-free ATMs nationwide</span></li>
-                    <li><i class="fas fa-check-circle"></i> <span>24/7 customer support via chat, phone, or email</span></li>
-                </ul>
-                
-                <button class="btn-primary">
-                    Explore Our Accounts <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
-                </button>
-            </div>
-            
-            <div class="banking-image">
-                Modern Banking Experience
-            </div>
-        </div>
-    </section>
-
-    <!-- App Section -->
-    <section class="app-section">
-        <div class="app-container">
-            <div class="app-image">
-                Mobile Banking App
-            </div>
-            
-            <div class="app-content">
-                <h2>Banking at your fingertips</h2>
-                <p>Manage your money anytime, anywhere with our award-winning mobile app. Check balances, transfer money, pay bills, and deposit checks with just a few taps.</p>
-                
-                <div class="app-stores">
-                    <button class="app-store-btn">
-                        <i class="fab fa-apple"></i>
-                        <div class="store-text">
-                            <span>Download on the</span>
-                            <span>App Store</span>
-                        </div>
-                    </button>
-                    
-                    <button class="app-store-btn">
-                        <i class="fab fa-google-play"></i>
-                        <div class="store-text">
-                            <span>Get it on</span>
-                            <span>Google Play</span>
-                        </div>
-                    </button>
+                    <button class="hero-btn hero-btn-primary">Open an account</button>
+                    <button class="hero-btn hero-btn-secondary">Explore High Yield Savings</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- BENEFITS SECTION -->
+    <section class="benefits">
+        <div class="benefits-container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Building your balance has never been this easy (or smart)</h2>
+                    <p>Say hello to top-tier rates, no fees, FDIC coverage, and the satisfaction of watching your money
+                        grow faster.</p>
+                    <button class="benefits-btn">Explore High Yield Savings</button>
+                </div>
+
+                <div class="benefits-image">
+                    <img src="assets/UUID2.avif" alt="Building your balance with Openbank">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITAL BANKING SECTION -->
+    <section class="digital-banking">
+        <div class="digital-container">
+            <div class="digital-image">
+                <img src="assets/UUID3.avif" alt="Digital Banking Platform">
+            </div>
+            <div class="digital-content">
+                <h2>Fully digital and powered by a top global bank</h2>
+                <p>Openbank is where innovation meets experience. It's where a seamless digital banking platform
+                    combines with Santander's 167 years of global banking experience. It's where top rates, no fees and
+                    24/7 access are made possible by stability and security. This is where smart meets banking.</p>
+                <button class="digital-btn">The Openbank History</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECURITY SECTION -->
+    <section class="security">
+        <div class="security-container">
+            <div class="security-content">
+                <h2>Keeping you and your money safe</h2>
+                <p>Nothing is more important than keeping your money and information secure. That's why Openbank offers
+                    industry-leading security from day one, with an advanced authentication process and trusted device
+                    enrollment that transforms your face or fingerprint into the keys to your account.</p>
+                <button class="security-btn">Learn About Security</button>
+            </div>
+
+            <div class="security-image">
+                <img src="assets/UUID4.avif" alt="Bank Security Protection">
+            </div>
+        </div>
+    </section>
+
+    <!-- MOBILE APP SECTION -->
+    <section class="mobile-app">
+        <div class="mobile-app-container">
+            <div class="mobile-app-image">
+                <img src="assets/UUID5.avif" alt="Openbank Mobile App">
+            </div>
+
+            <div class="mobile-app-content">
+                <h2>Use our secure mobile app to manage your bank account</h2>
+                <p>Manage every detail of your digital bank account from the palm of your hand with the Openbank mobile app. Available on the App Store® and on Google Play.</p>
+
+                <div class="app-buttons">
+                    <a href="#" class="app-download-btn" id="appStoreBtn">
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"
+                            alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="app-download-btn" id="googlePlayBtn">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                            alt="Get it on Google Play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MILESTONE SECTION -->
+    <section class="milestone">
+        <div class="milestone-container">
+            <div class="milestone-content">
+                <div class="milestone-number">100,000</div>
+                <div class="milestone-text">Thank Yous!</div>
+                <p>Openbank now serves over 100,000 customers across America. We know trusting someone with your money
+                    is a big deal, and we don't take it lightly. In fact, it's why we created a banking experience
+                    that's smarter, simpler, and more secure than ever before.</p>
+            </div>
+            <div class="milestone-image">
+                <img src="assets/UUID6.avif" alt="Openbank Customers Celebration">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq">
+        <div class="faq-container">
+            <h2 class="faq-title">Have questions? We have answers.</h2>
+            <p class="faq-subtitle">Wondering how to open an online bank account? How to change your password? Where to
+                contact our Customer Service Center? Whose face is on a $2 bill? We have (almost) all your answers.</p>
+
+            <button class="faq-btn">View FAQs</button>
+
+            <div class="faq-disclaimer">
+                <p>Interest Rates and Annual Percentage Yields (APYs) shown are accurate and effective as of 12:01 AM
+                    Eastern Time today. The products and rates we offer may vary between locations, are available in
+                    select markets only, and are subject to change without notice. Availability and rate for this
+                    product will be based on the residential ZIP code entered when account is opened within online
+                    application process. This is a variable-rate account and the rate applicable may change at our
+                    discretion any time without notice. Fees may reduce earnings. A minimum deposit of $500 is required
+                    to open an Openbank High Yield Savings account. Personal accounts only. For more information about
+                    applicable fees and terms, refer to the <a href="#">Personal Deposit Account Fee Schedule</a>.</p>
+                <p style="margin-top: 15px;">*The comparison is based upon the national average for Savings deposit
+                    products as published in the FDIC National Rates and Rate Caps on <a href="FDIC.gov">FDIC.gov</a> of
+                    0.39%, accurate as of December 15, 2025.</p>
+                <p style="margin-top: 15px;">For more information, refer to the <a href="#">Personal Deposit Account Fee
+                        Schedule</a>.</p>
+                <p style="margin-top: 15px;">There is a maximum of $250,000 of deposit insurance from the FDIC per
+                    depositor for each category of account ownership. Please visit <a href="FDIC.gov">FDIC.gov</a> for
+                    details. Deposits at Santander Bank and Openbank are combined for the purposes of calculating FDIC
+                    insurance limits (FDIC Cert #29950) and are not separately insured.</p>
+                <p style="margin-top: 15px;">App Store is a registered trademark of Apple Inc. Google Play is a
+                    trademark of Google, LLC.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>OpenBank</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Investor Relations</a></li>
-                    </ul>
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="assets/logo_by_santander.webp" alt="Openbank by Santander">
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Accounts</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Checking</a></li>
-                        <li><a href="#">Savings</a></li>
-                        <li><a href="#">CDs</a></li>
-                        <li><a href="#">IRAs</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Mobile Banking</a></li>
-                        <li><a href="#">Online Banking</a></li>
-                        <li><a href="#">Bill Pay</a></li>
-                        <li><a href="#">Zelle®</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Disclosures</a></li>
-                    </ul>
+                <div class="footer-links-row">
+                    <a href="#">Privacy policy</a>
+                    <a href="#">Disclosures</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Terms of use</a>
+                    <a href="#">Help and contact</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <div class="footer-logo">
-                    <i class="fas fa-university"></i> OpenBank
-                </div>
-                
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                
-                <div class="copyright">
-                    &copy; 2026 OpenBank. All rights reserved. OpenBank is a registered trademark. Banking services provided by OpenBank, Member FDIC.
-                </div>
+                ©2026 Santander Bank, N.A. All rights reserved. Openbank is a division of Santander Bank, N.A. Member
+                FDIC.
             </div>
         </div>
     </footer>
 
     <script src="JavaScript/script.js"></script>
 </body>
+
 </html>

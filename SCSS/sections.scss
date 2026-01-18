@@ -1,0 +1,550 @@
+@use 'variables' as v;
+
+@mixin section-image {
+    height: v.$image-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    @media (max-width: v.$breakpoint-xxl) {
+        height: v.$image-height-tablet;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        height: v.$image-height-mobile;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        height: v.$image-height-small;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        height: v.$image-height-xs;
+    }
+}
+
+@mixin section-title {
+    font-size: 36px;
+    font-weight: v.$font-weight-bold;
+    margin-bottom: 20px;
+    color: v.$gray-dark;
+    line-height: 1.3;
+
+    @media (max-width: v.$breakpoint-xxl) {
+        font-size: 32px;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        font-size: 30px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 26px;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 24px;
+    }
+}
+
+@mixin section-paragraph {
+    font-size: 18px;
+    color: v.$gray-medium;
+    margin-bottom: 30px;
+    line-height: 1.6;
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+
+@mixin section-button {
+    font-family: v.$font-family;
+    font-weight: v.$font-weight-regular;
+    cursor: pointer;
+    transition: all v.$transition-normal;
+    border-radius: 50px;
+    border: 1px solid v.$black;
+    font-size: 16px;
+    padding: 14px 30px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    background-color: v.$white;
+    color: v.$black;
+
+    &:hover {
+        background-color: v.$gray-light;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+@mixin section-container {
+    max-width: v.$container-max-width;
+    margin: 0 auto;
+    padding: 0 v.$container-padding;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 0 v.$container-padding-mobile;
+    }
+}
+
+/* BENEFITS SECTION */
+.benefits {
+    padding: 80px 20px;
+    background-color: v.$white;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.benefits-container {
+    @include section-container;
+}
+
+.benefits-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 30px;
+    }
+}
+
+.benefits-text {
+    flex: 1;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: center;
+    }
+
+    h2 {
+        @include section-title;
+    }
+
+    p {
+        @include section-paragraph;
+    }
+}
+
+.benefits-image {
+    flex: 1;
+    @include section-image;
+}
+
+.benefits-btn {
+    @include section-button;
+}
+
+/* DIGITAL BANKING SECTION  */
+.digital-banking {
+    padding: 80px 20px;
+    background-color: v.$white;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.digital-container {
+    @include section-container;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 30px;
+    }
+}
+
+.digital-content {
+    flex: 1;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: center;
+    }
+
+    h2 {
+        @include section-title;
+    }
+
+    p {
+        @include section-paragraph;
+    }
+}
+
+.digital-image {
+    flex: 1;
+    @include section-image;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.digital-btn {
+    @include section-button;
+}
+
+/* SECURITY SECTION */
+.security {
+    padding: 80px 20px;
+    background-color: v.$gray-light;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.security-container {
+    @include section-container;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 30px;
+    }
+}
+
+.security-content {
+    flex: 1;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: center;
+    }
+
+    h2 {
+        @include section-title;
+    }
+
+    p {
+        @include section-paragraph;
+    }
+}
+
+.security-image {
+    flex: 1;
+    @include section-image;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.security-btn {
+    @include section-button;
+}
+
+/* MOBILE APP SECTION */
+.mobile-app {
+    padding: 80px 20px;
+    background-color: v.$white;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.mobile-app-container {
+    @include section-container;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 30px;
+    }
+}
+
+.mobile-app-content {
+    flex: 1;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: center;
+    }
+
+    h2 {
+        @include section-title;
+    }
+
+    p {
+        @include section-paragraph;
+    }
+}
+
+.mobile-app-image {
+    flex: 1;
+    @include section-image;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: flex-start;
+
+    @media (max-width: v.$breakpoint-lg) {
+        align-items: center;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 12px;
+    }
+}
+
+.app-download-btn {
+    display: inline-block;
+    text-decoration: none;
+    transition: all v.$transition-normal;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 180px;
+    height: 54px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform v.$transition-normal;
+    }
+
+    &:hover img {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: v.$breakpoint-xxl) {
+        width: 170px;
+        height: 51px;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        width: 160px;
+        height: 48px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        width: 150px;
+        height: 45px;
+        max-width: 200px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        width: 140px;
+        height: 42px;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        width: 130px;
+        height: 39px;
+    }
+}
+
+/* MILESTONE SECTION*/
+.milestone {
+    padding: 80px 20px;
+    background-color: v.$gray-light;
+    color: v.$gray-dark;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.milestone-container {
+    @include section-container;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @media (max-width: v.$breakpoint-lg) {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        gap: 30px;
+    }
+}
+
+.milestone-content {
+    flex: 1;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: center;
+    }
+}
+
+.milestone-image {
+    flex: 1;
+    @include section-image;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.milestone-number {
+    font-size: 72px;
+    font-weight: v.$font-weight-extrabold;
+    margin-bottom: 15px;
+    color: v.$gray-dark;
+
+    @media (max-width: v.$breakpoint-xxl) {
+        font-size: 64px;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        font-size: 56px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 42px;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 38px;
+    }
+}
+
+.milestone-text {
+    font-size: 32px;
+    font-weight: v.$font-weight-semibold;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    color: v.$gray-dark;
+
+    @media (max-width: v.$breakpoint-xxl) {
+        font-size: 28px;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        font-size: 26px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 22px;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 20px;
+    }
+}
+
+.milestone-content p {
+    @include section-paragraph;
+}
+
+/* FAQ SECTION */
+.faq {
+    padding: 80px 20px;
+    background-color: v.$white;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 60px 16px;
+    }
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-title {
+    @include section-title;
+}
+
+.faq-subtitle {
+    @include section-paragraph;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-btn {
+    @include section-button;
+    margin-bottom: 40px;
+
+    @media (max-width: v.$breakpoint-md) {
+        margin-bottom: 30px;
+    }
+}
+
+.faq-disclaimer {
+    padding: 30px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: v.$gray-dark;
+    text-align: left;
+    margin-top: 30px;
+    border-top: 1px solid v.$gray-light;
+
+    @media (max-width: v.$breakpoint-md) {
+        padding: 20px 0;
+        font-size: 13px;
+    }
+
+    a {
+        color: v.$primary-red;
+        text-decoration: none;
+        font-weight: v.$font-weight-medium;
+
+        &:hover {
+            text-decoration: underline;
+            color: v.$secondary-red;
+        }
+    }
+
+    p {
+        margin-top: 15px;
+    }
+}
