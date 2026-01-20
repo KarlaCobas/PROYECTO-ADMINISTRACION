@@ -125,17 +125,16 @@ header {
     cursor: pointer;
     transition: all v.$transition-normal;
     border-radius: 50px;
-    border: none;
     font-size: 14px;
     padding: 8px 22px;
 
     &-login {
-        background-color: transparent;
-        border: 2px solid v.$primary-red;
-        color: v.$primary-red;
+        background-color: v.$white;
+        border: 1px solid v.$black;
+        color: v.$black;
 
         &:hover {
-            background-color: rgba(224, 0, 0, 0.05);
+            background-color: v.$gray-light;
             transform: translateY(-2px);
         }
     }
@@ -143,6 +142,7 @@ header {
     &-signup {
         background-color: v.$primary-red;
         color: v.$white;
+        border: none;
 
         &:hover {
             background-color: v.$secondary-red;
@@ -321,8 +321,7 @@ header {
     margin-bottom: 0;
 
     @media (max-width: v.$breakpoint-sm) {
-        flex-direction: column;
-        gap: 0;
+        flex-direction: row;
     }
 }
 
@@ -331,7 +330,7 @@ header {
     min-width: calc(50% - 7.5px);
 
     @media (max-width: v.$breakpoint-sm) {
-        min-width: 100%;
+        min-width: calc(50% - 7.5px);
     }
 
     a {
@@ -349,9 +348,13 @@ header {
 
         @media (max-width: v.$breakpoint-sm) {
             padding: 15px 0;
-            border-bottom: 1px solid v.$gray-light;
+            border-bottom: none;
         }
     }
+}
+
+.mobile-link-single {
+    width: 100%;
 }
 
 .mobile-menu-footer {
@@ -360,9 +363,10 @@ header {
     display: flex;
     gap: 12px;
     flex-shrink: 0;
+    flex-direction: row;
 
     @media (max-width: v.$breakpoint-sm) {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         padding: 15px;
     }
@@ -382,8 +386,8 @@ header {
 
         &-login {
             background-color: v.$white;
-            border: 2px solid v.$primary-red;
-            color: v.$primary-red;
+            border: 1px solid v.$black;
+            color: v.$black;
         }
     }
 }

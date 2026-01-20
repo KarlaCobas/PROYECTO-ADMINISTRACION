@@ -1,6 +1,5 @@
 @use 'variables' as v;
 
-/*HERO SECTION MODIFICADA */
 .hero {
     background-color: v.$white;
     padding: 80px 0;
@@ -36,10 +35,7 @@
 
 .hero-content {
     flex: 1;
-
-    @media (max-width: v.$breakpoint-lg) {
-        text-align: center;
-    }
+    text-align: left;
 }
 
 .hero-image-container {
@@ -83,65 +79,56 @@
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: v.$font-weight-bold;
-    line-height: 1.2;
+    font-family: v.$font-headline;
+    font-weight: v.$font-weight-light;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
     color: v.$gray-dark;
     margin-bottom: 20px;
 
     @media (max-width: v.$breakpoint-xxl) {
-        font-size: 42px;
+        font-size: 2.8rem;
     }
 
     @media (max-width: v.$breakpoint-lg) {
-        font-size: 36px;
-        text-align: center;
+        text-align: left;
     }
 
     @media (max-width: v.$breakpoint-md) {
-        font-size: 32px;
+        font-size: 2.5rem;
         margin-bottom: 15px;
     }
 
     @media (max-width: v.$breakpoint-sm) {
-        font-size: 28px;
+        font-size: 2.2rem;
     }
 
     @media (max-width: v.$breakpoint-xs) {
-        font-size: 26px;
+        font-size: 2rem;
     }
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-family: v.$font-headline;
+    font-weight: v.$font-weight-regular;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     color: v.$gray-dark;
     margin-bottom: 30px;
-    line-height: 1.5;
 
     strong {
         font-weight: v.$font-weight-bold;
         color: v.$black;
     }
 
-    @media (max-width: v.$breakpoint-xxl) {
-        font-size: 18px;
-    }
-
     @media (max-width: v.$breakpoint-lg) {
-        text-align: center;
+        text-align: left;
     }
 
     @media (max-width: v.$breakpoint-md) {
-        font-size: 16px;
         margin-bottom: 25px;
-    }
-
-    @media (max-width: v.$breakpoint-sm) {
-        font-size: 15px;
-    }
-
-    @media (max-width: v.$breakpoint-xs) {
-        font-size: 14px;
     }
 }
 
@@ -151,7 +138,7 @@
     margin-top: 30px;
 
     @media (max-width: v.$breakpoint-lg) {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     @media (max-width: v.$breakpoint-md) {
@@ -169,15 +156,16 @@
     border-radius: 50px;
     border: none;
     font-size: 16px;
-    padding: 14px 30px;
+    padding: 0.75rem 1rem;
     text-align: center;
     display: inline-block;
     text-decoration: none;
+    width: auto;
 
     @media (max-width: v.$breakpoint-md) {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 16px;
+        width: auto;
+        padding: 0.5rem 0.75rem;
+        font-size: 14px;
     }
 
     &-primary {

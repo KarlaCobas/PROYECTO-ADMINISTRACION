@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   background-color: #FFFFFF;
   color: #343A40;
   line-height: 1.6;
@@ -30,7 +30,6 @@ img {
   }
 }
 
-/* ===== HEADER ===== */
 header {
   background-color: #FFFFFF;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -68,7 +67,6 @@ header.hide {
   }
 }
 
-/* LOGO CON IMAGEN SVG - TAMAÑO PEQUEÑO */
 .logo {
   font-size: 22px;
   font-weight: 700;
@@ -77,31 +75,48 @@ header.hide {
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
-  /* IMAGEN DEL LOGO SVG - TAMAÑO MUY PEQUEÑO */
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 .logo img {
-  height: 24px; /* Tamaño muy pequeño */
-  width: auto;
-  display: block;
+  height: 24px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block !important;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 767px) {
   .logo {
     font-size: 20px;
   }
   .logo img {
-    height: 20px; /* Tamaño muy pequeño para móvil */
+    height: 20px !important;
+  }
+}
+@media (max-width: 480px) {
+  .logo img {
+    height: 18px !important;
   }
 }
 
-/* Navegación Desktop MODIFICADA - Más cerca del logo pequeño */
+.logo-small img,
+.logo img[src*=logo] {
+  height: 24px !important;
+  width: auto !important;
+  max-height: 24px !important;
+}
+
+/* Navegación Desktop */
 .nav-links {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 15px; /* Reducido para estar más cerca del logo pequeño */
+  margin-left: 15px;
   gap: 25px;
 }
 @media (max-width: 767px) {
@@ -122,7 +137,6 @@ header.hide {
   color: rgb(224, 0, 0);
 }
 
-/* Botones Header */
 .header-buttons {
   display: flex;
   align-items: center;
@@ -136,34 +150,34 @@ header.hide {
 }
 
 .btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 50px;
-  border: none;
   font-size: 14px;
   padding: 8px 22px;
 }
 .btn-login {
-  background-color: transparent;
-  border: 2px solid rgb(224, 0, 0);
-  color: rgb(224, 0, 0);
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  color: #000000;
 }
 .btn-login:hover {
-  background-color: rgba(224, 0, 0, 0.05);
+  background-color: #F5F7FA;
   transform: translateY(-2px);
 }
 .btn-signup {
   background-color: rgb(224, 0, 0);
   color: #FFFFFF;
+  border: none;
 }
 .btn-signup:hover {
   background-color: rgb(180, 0, 0);
   transform: translateY(-2px);
 }
 
-/* ===== MENÚ HAMBURGUESA ===== */
+/* MENÚ HAMBURGUESA */
 .hamburger-btn {
   display: none;
   flex-direction: column;
@@ -207,7 +221,6 @@ header.hide {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Overlay */
 .menu-overlay {
   display: none;
   position: fixed;
@@ -218,14 +231,13 @@ header.hide {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9998;
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 0.3s ease;
 }
 .menu-overlay.active {
   display: block;
   opacity: 1;
 }
 
-/* Menú Móvil MODIFICADO - Sin logo, solo botón de cerrar */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -238,7 +250,7 @@ header.hide {
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  transition: left 3s ease;
+  transition: left 0.3s ease;
   overflow-y: auto;
   border-top: 4px solid rgb(224, 0, 0);
 }
@@ -257,16 +269,16 @@ header.hide {
   }
 }
 
-/* ENCABEZADO DEL MENÚ MÓVIL MODIFICADO - Botón de cerrar en ESQUINA DERECHA */
 .mobile-menu-header {
   padding: 15px 15px 10px;
   display: flex;
-  justify-content: flex-end; /* Empuja el botón a la derecha */
-  align-items: flex-start; /* Alinea en la parte superior */
+  justify-content: flex-end;
+  align-items: flex-start;
   border-bottom: 1px solid #F5F7FA;
   flex-shrink: 0;
   min-height: 60px;
   width: 100%;
+  position: relative;
 }
 @media (max-width: 360px) {
   .mobile-menu-header {
@@ -275,7 +287,6 @@ header.hide {
   }
 }
 
-/* Botón de cerrar del menú móvil - ESQUINA SUPERIOR DERECHA */
 .mobile-close-btn {
   background: transparent;
   border: none;
@@ -291,7 +302,6 @@ header.hide {
   transition: all 0.3s ease;
   padding: 0;
   margin: 0;
-  /* POSICIÓN EN ESQUINA SUPERIOR DERECHA */
   position: absolute;
   top: 15px;
   right: 15px;
@@ -310,12 +320,11 @@ header.hide {
   }
 }
 
-/* Eliminamos los estilos de .mobile-menu-logo ya que el logo fue eliminado */
 .mobile-menu-content {
   flex: 1;
-  padding: 25px 20px 20px; /* Más padding arriba para dar espacio al botón de cerrar */
+  padding: 25px 20px 20px;
   overflow-y: auto;
-  margin-top: 10px; /* Espacio extra para el botón de cerrar */
+  margin-top: 10px;
 }
 @media (max-width: 360px) {
   .mobile-menu-content {
@@ -336,8 +345,7 @@ header.hide {
 }
 @media (max-width: 480px) {
   .mobile-links-row {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
   }
 }
 
@@ -347,7 +355,7 @@ header.hide {
 }
 @media (max-width: 480px) {
   .mobile-link-item {
-    min-width: 100%;
+    min-width: calc(50% - 7.5px);
   }
 }
 .mobile-link-item a {
@@ -365,8 +373,12 @@ header.hide {
 @media (max-width: 480px) {
   .mobile-link-item a {
     padding: 15px 0;
-    border-bottom: 1px solid #F5F7FA;
+    border-bottom: none;
   }
+}
+
+.mobile-link-single {
+  width: 100%;
 }
 
 .mobile-menu-footer {
@@ -375,10 +387,11 @@ header.hide {
   display: flex;
   gap: 12px;
   flex-shrink: 0;
+  flex-direction: row;
 }
 @media (max-width: 480px) {
   .mobile-menu-footer {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     padding: 15px;
   }
@@ -397,11 +410,10 @@ header.hide {
 }
 .mobile-menu-footer .btn-login {
   background-color: #FFFFFF;
-  border: 2px solid rgb(224, 0, 0);
-  color: rgb(224, 0, 0);
+  border: 1px solid #000000;
+  color: #000000;
 }
 
-/*HERO SECTION MODIFICADA */
 .hero {
   background-color: #FFFFFF;
   padding: 80px 0;
@@ -441,11 +453,7 @@ header.hide {
 
 .hero-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .hero-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 
 .hero-image-container {
@@ -494,74 +502,62 @@ header.hide {
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   color: #343A40;
   margin-bottom: 20px;
 }
 @media (max-width: 1199px) {
   .hero h1 {
-    font-size: 42px;
+    font-size: 2.8rem;
   }
 }
 @media (max-width: 1023px) {
   .hero h1 {
-    font-size: 36px;
-    text-align: center;
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
   .hero h1 {
-    font-size: 32px;
+    font-size: 2.5rem;
     margin-bottom: 15px;
   }
 }
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 360px) {
   .hero h1 {
-    font-size: 26px;
+    font-size: 2rem;
   }
 }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #343A40;
   margin-bottom: 30px;
-  line-height: 1.5;
 }
 .hero-subtitle strong {
   font-weight: 700;
   color: #000000;
 }
-@media (max-width: 1199px) {
-  .hero-subtitle {
-    font-size: 18px;
-  }
-}
 @media (max-width: 1023px) {
   .hero-subtitle {
-    text-align: center;
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
   .hero-subtitle {
-    font-size: 16px;
     margin-bottom: 25px;
-  }
-}
-@media (max-width: 480px) {
-  .hero-subtitle {
-    font-size: 15px;
-  }
-}
-@media (max-width: 360px) {
-  .hero-subtitle {
-    font-size: 14px;
   }
 }
 
@@ -572,7 +568,7 @@ header.hide {
 }
 @media (max-width: 1023px) {
   .hero-buttons {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 767px) {
@@ -584,23 +580,24 @@ header.hide {
 }
 
 .hero-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 50px;
   border: none;
   font-size: 16px;
-  padding: 14px 30px;
+  padding: 0.75rem 1rem;
   text-align: center;
   display: inline-block;
   text-decoration: none;
+  width: auto;
 }
 @media (max-width: 767px) {
   .hero-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 .hero-btn-primary {
@@ -662,54 +659,33 @@ header.hide {
 
 .benefits-text {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .benefits-text {
-    text-align: center;
-  }
+  text-align: left;
 }
 .benefits-text h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .benefits-text h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .benefits-text h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .benefits-text h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .benefits-text h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .benefits-text h2 {
-    font-size: 24px;
-  }
-}
 .benefits-text p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .benefits-text p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -754,7 +730,7 @@ header.hide {
 }
 
 .benefits-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -774,9 +750,9 @@ header.hide {
 }
 @media (max-width: 767px) {
   .benefits-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -818,54 +794,33 @@ header.hide {
 
 .digital-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .digital-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .digital-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .digital-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .digital-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .digital-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .digital-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .digital-content h2 {
-    font-size: 24px;
-  }
-}
 .digital-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .digital-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -911,7 +866,7 @@ header.hide {
 }
 
 .digital-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -931,9 +886,9 @@ header.hide {
 }
 @media (max-width: 767px) {
   .digital-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -953,6 +908,7 @@ header.hide {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 60px;
 }
@@ -963,66 +919,46 @@ header.hide {
 }
 @media (max-width: 1023px) {
   .security-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 40px;
   }
 }
 @media (max-width: 767px) {
   .security-container {
+    flex-direction: column;
     gap: 30px;
   }
 }
 
 .security-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .security-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .security-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .security-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .security-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .security-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .security-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .security-content h2 {
-    font-size: 24px;
-  }
-}
 .security-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .security-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -1036,7 +972,9 @@ header.hide {
   overflow: hidden;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .security-image img {
   width: 100%;
@@ -1068,7 +1006,7 @@ header.hide {
 }
 
 .security-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1088,9 +1026,9 @@ header.hide {
 }
 @media (max-width: 767px) {
   .security-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -1132,54 +1070,33 @@ header.hide {
 
 .mobile-app-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .mobile-app-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .mobile-app-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .mobile-app-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .mobile-app-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .mobile-app-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .mobile-app-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .mobile-app-content h2 {
-    font-size: 24px;
-  }
-}
 .mobile-app-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .mobile-app-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -1233,7 +1150,7 @@ header.hide {
 }
 @media (max-width: 1023px) {
   .app-buttons {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 @media (max-width: 767px) {
@@ -1248,14 +1165,14 @@ header.hide {
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
-  width: 180px;
-  height: 54px;
+  width: 160px;
+  height: 48px;
 }
 .app-download-btn img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -1264,8 +1181,8 @@ header.hide {
 }
 @media (max-width: 1199px) {
   .app-download-btn {
-    width: 170px;
-    height: 51px;
+    width: 160px;
+    height: 48px;
   }
 }
 @media (max-width: 1023px) {
@@ -1276,8 +1193,8 @@ header.hide {
 }
 @media (max-width: 767px) {
   .app-download-btn {
-    width: 150px;
-    height: 45px;
+    width: 140px;
+    height: 42px;
     max-width: 200px;
   }
 }
@@ -1333,11 +1250,7 @@ header.hide {
 
 .milestone-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .milestone-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 
 .milestone-image {
@@ -1381,81 +1294,37 @@ header.hide {
 }
 
 .milestone-number {
-  font-size: 72px;
-  font-weight: 800;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 15px;
   color: #343A40;
 }
-@media (max-width: 1199px) {
-  .milestone-number {
-    font-size: 64px;
-  }
-}
-@media (max-width: 1023px) {
-  .milestone-number {
-    font-size: 56px;
-  }
-}
-@media (max-width: 767px) {
-  .milestone-number {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 480px) {
-  .milestone-number {
-    font-size: 42px;
-  }
-}
-@media (max-width: 360px) {
-  .milestone-number {
-    font-size: 38px;
-  }
-}
 
 .milestone-text {
-  font-size: 32px;
-  font-weight: 600;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 25px;
-  line-height: 1.3;
   color: #343A40;
-}
-@media (max-width: 1199px) {
-  .milestone-text {
-    font-size: 28px;
-  }
-}
-@media (max-width: 1023px) {
-  .milestone-text {
-    font-size: 26px;
-  }
-}
-@media (max-width: 767px) {
-  .milestone-text {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .milestone-text {
-    font-size: 22px;
-  }
-}
-@media (max-width: 360px) {
-  .milestone-text {
-    font-size: 20px;
-  }
 }
 
 .milestone-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .milestone-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -1474,61 +1343,47 @@ header.hide {
 .faq-container {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .faq-container {
+    text-align: center;
+  }
 }
 
 .faq-title {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .faq-title {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .faq-title {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .faq-title {
-    font-size: 28px;
     margin-bottom: 15px;
-  }
-}
-@media (max-width: 480px) {
-  .faq-title {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .faq-title {
-    font-size: 24px;
   }
 }
 
 .faq-subtitle {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .faq-subtitle {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
 
 .faq-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1542,6 +1397,9 @@ header.hide {
   background-color: #FFFFFF;
   color: #000000;
   margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .faq-btn:hover {
   background-color: #F5F7FA;
@@ -1549,9 +1407,9 @@ header.hide {
 }
 @media (max-width: 767px) {
   .faq-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
@@ -1588,7 +1446,6 @@ header.hide {
   margin-top: 15px;
 }
 
-/* FOOTER MODIFICADO */
 footer {
   background-color: #000000;
   color: #FFFFFF;
@@ -1658,21 +1515,19 @@ footer {
 .footer-links-row {
   display: flex;
   gap: 25px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-left: 0;
   padding-left: 0;
 }
-@media (max-width: 1023px) {
-  .footer-links-row {
-    justify-content: flex-start;
-    gap: 20px;
-  }
-}
 @media (max-width: 767px) {
   .footer-links-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px 10px;
+    width: 100%;
+  }
+  .footer-links-row > a {
+    flex: 0 0 calc(50% - 10px);
   }
 }
 .footer-links-row a {

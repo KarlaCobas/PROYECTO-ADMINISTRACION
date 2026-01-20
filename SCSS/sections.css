@@ -39,54 +39,33 @@
 
 .benefits-text {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .benefits-text {
-    text-align: center;
-  }
+  text-align: left;
 }
 .benefits-text h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .benefits-text h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .benefits-text h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .benefits-text h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .benefits-text h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .benefits-text h2 {
-    font-size: 24px;
-  }
-}
 .benefits-text p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .benefits-text p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -131,7 +110,7 @@
 }
 
 .benefits-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -151,9 +130,9 @@
 }
 @media (max-width: 767px) {
   .benefits-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -195,54 +174,33 @@
 
 .digital-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .digital-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .digital-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .digital-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .digital-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .digital-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .digital-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .digital-content h2 {
-    font-size: 24px;
-  }
-}
 .digital-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .digital-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -288,7 +246,7 @@
 }
 
 .digital-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -308,9 +266,9 @@
 }
 @media (max-width: 767px) {
   .digital-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -330,6 +288,7 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 60px;
 }
@@ -340,66 +299,46 @@
 }
 @media (max-width: 1023px) {
   .security-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 40px;
   }
 }
 @media (max-width: 767px) {
   .security-container {
+    flex-direction: column;
     gap: 30px;
   }
 }
 
 .security-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .security-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .security-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .security-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .security-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .security-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .security-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .security-content h2 {
-    font-size: 24px;
-  }
-}
 .security-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .security-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -413,7 +352,9 @@
   overflow: hidden;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .security-image img {
   width: 100%;
@@ -445,7 +386,7 @@
 }
 
 .security-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -465,9 +406,9 @@
 }
 @media (max-width: 767px) {
   .security-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 
@@ -509,54 +450,33 @@
 
 .mobile-app-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .mobile-app-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 .mobile-app-content h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .mobile-app-content h2 {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .mobile-app-content h2 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .mobile-app-content h2 {
-    font-size: 28px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 480px) {
-  .mobile-app-content h2 {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .mobile-app-content h2 {
-    font-size: 24px;
-  }
-}
 .mobile-app-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .mobile-app-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -610,7 +530,7 @@
 }
 @media (max-width: 1023px) {
   .app-buttons {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 @media (max-width: 767px) {
@@ -625,14 +545,14 @@
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
-  width: 180px;
-  height: 54px;
+  width: 160px;
+  height: 48px;
 }
 .app-download-btn img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -641,8 +561,8 @@
 }
 @media (max-width: 1199px) {
   .app-download-btn {
-    width: 170px;
-    height: 51px;
+    width: 160px;
+    height: 48px;
   }
 }
 @media (max-width: 1023px) {
@@ -653,8 +573,8 @@
 }
 @media (max-width: 767px) {
   .app-download-btn {
-    width: 150px;
-    height: 45px;
+    width: 140px;
+    height: 42px;
     max-width: 200px;
   }
 }
@@ -710,11 +630,7 @@
 
 .milestone-content {
   flex: 1;
-}
-@media (max-width: 1023px) {
-  .milestone-content {
-    text-align: center;
-  }
+  text-align: left;
 }
 
 .milestone-image {
@@ -758,81 +674,37 @@
 }
 
 .milestone-number {
-  font-size: 72px;
-  font-weight: 800;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 15px;
   color: #343A40;
 }
-@media (max-width: 1199px) {
-  .milestone-number {
-    font-size: 64px;
-  }
-}
-@media (max-width: 1023px) {
-  .milestone-number {
-    font-size: 56px;
-  }
-}
-@media (max-width: 767px) {
-  .milestone-number {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-}
-@media (max-width: 480px) {
-  .milestone-number {
-    font-size: 42px;
-  }
-}
-@media (max-width: 360px) {
-  .milestone-number {
-    font-size: 38px;
-  }
-}
 
 .milestone-text {
-  font-size: 32px;
-  font-weight: 600;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 25px;
-  line-height: 1.3;
   color: #343A40;
-}
-@media (max-width: 1199px) {
-  .milestone-text {
-    font-size: 28px;
-  }
-}
-@media (max-width: 1023px) {
-  .milestone-text {
-    font-size: 26px;
-  }
-}
-@media (max-width: 767px) {
-  .milestone-text {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .milestone-text {
-    font-size: 22px;
-  }
-}
-@media (max-width: 360px) {
-  .milestone-text {
-    font-size: 20px;
-  }
 }
 
 .milestone-content p {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
 }
 @media (max-width: 767px) {
   .milestone-content p {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
@@ -851,61 +723,47 @@
 .faq-container {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .faq-container {
+    text-align: center;
+  }
 }
 
 .faq-title {
-  font-size: 36px;
-  font-weight: 700;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
   margin-bottom: 20px;
   color: #343A40;
-  line-height: 1.3;
-}
-@media (max-width: 1199px) {
-  .faq-title {
-    font-size: 32px;
-  }
-}
-@media (max-width: 1023px) {
-  .faq-title {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .faq-title {
-    font-size: 28px;
     margin-bottom: 15px;
-  }
-}
-@media (max-width: 480px) {
-  .faq-title {
-    font-size: 26px;
-  }
-}
-@media (max-width: 360px) {
-  .faq-title {
-    font-size: 24px;
   }
 }
 
 .faq-subtitle {
-  font-size: 18px;
+  font-family: "Santander Headline", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
-  line-height: 1.6;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .faq-subtitle {
-    font-size: 16px;
     margin-bottom: 20px;
   }
 }
 
 .faq-btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -919,6 +777,9 @@
   background-color: #FFFFFF;
   color: #000000;
   margin-bottom: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .faq-btn:hover {
   background-color: #F5F7FA;
@@ -926,9 +787,9 @@
 }
 @media (max-width: 767px) {
   .faq-btn {
-    width: 100%;
-    padding: 12px 20px;
-    font-size: 16px;
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {

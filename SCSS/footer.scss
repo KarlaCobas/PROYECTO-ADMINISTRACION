@@ -1,6 +1,5 @@
 @use 'variables' as v;
 
-/* FOOTER MODIFICADO */
 footer {
     background-color: v.$black;
     color: v.$white;
@@ -66,19 +65,18 @@ footer {
 .footer-links-row {
     display: flex;
     gap: 25px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-left: 0;
     padding-left: 0;
 
-    @media (max-width: v.$breakpoint-lg) {
-        justify-content: flex-start;
-        gap: 20px;
-    }
-
     @media (max-width: v.$breakpoint-md) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px 10px;
+        width: 100%;
+        & > a {
+            flex: 0 0 calc(50% - 10px);
+        }
     }
 
     a {

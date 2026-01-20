@@ -119,27 +119,27 @@ header.hide {
 }
 
 .btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Santander Text", "Inter", sans-serif;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 50px;
-  border: none;
   font-size: 14px;
   padding: 8px 22px;
 }
 .btn-login {
-  background-color: transparent;
-  border: 2px solid rgb(224, 0, 0);
-  color: rgb(224, 0, 0);
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  color: #000000;
 }
 .btn-login:hover {
-  background-color: rgba(224, 0, 0, 0.05);
+  background-color: #F5F7FA;
   transform: translateY(-2px);
 }
 .btn-signup {
   background-color: rgb(224, 0, 0);
   color: #FFFFFF;
+  border: none;
 }
 .btn-signup:hover {
   background-color: rgb(180, 0, 0);
@@ -314,8 +314,7 @@ header.hide {
 }
 @media (max-width: 480px) {
   .mobile-links-row {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
   }
 }
 
@@ -325,7 +324,7 @@ header.hide {
 }
 @media (max-width: 480px) {
   .mobile-link-item {
-    min-width: 100%;
+    min-width: calc(50% - 7.5px);
   }
 }
 .mobile-link-item a {
@@ -343,8 +342,12 @@ header.hide {
 @media (max-width: 480px) {
   .mobile-link-item a {
     padding: 15px 0;
-    border-bottom: 1px solid #F5F7FA;
+    border-bottom: none;
   }
+}
+
+.mobile-link-single {
+  width: 100%;
 }
 
 .mobile-menu-footer {
@@ -353,10 +356,11 @@ header.hide {
   display: flex;
   gap: 12px;
   flex-shrink: 0;
+  flex-direction: row;
 }
 @media (max-width: 480px) {
   .mobile-menu-footer {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     padding: 15px;
   }
@@ -375,6 +379,6 @@ header.hide {
 }
 .mobile-menu-footer .btn-login {
   background-color: #FFFFFF;
-  border: 2px solid rgb(224, 0, 0);
-  color: rgb(224, 0, 0);
+  border: 1px solid #000000;
+  color: #000000;
 }/*# sourceMappingURL=header.css.map */
