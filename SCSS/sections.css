@@ -1,7 +1,18 @@
 /* BENEFITS SECTION */
 .benefits {
+  display: grid;
+  margin: auto;
+  font: inherit;
+  text-decoration: none;
   padding: 80px 20px;
-  background-color: #FFFFFF;
+  vertical-align: baseline;
+  margin-block: 0px;
+  margin-inline: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0px;
+  font-size: 100%;
+  font-family: "Santander MicroText", sans-serif;
 }
 @media (max-width: 767px) {
   .benefits {
@@ -39,7 +50,11 @@
 
 .benefits-text {
   flex: 1;
-  text-align: left;
+}
+@media (max-width: 1023px) {
+  .benefits-text {
+    text-align: left;
+  }
 }
 .benefits-text h2 {
   font-family: "Santander Headline", sans-serif;
@@ -48,12 +63,26 @@
   line-height: 2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 20px;
   color: #343A40;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .benefits-text h2 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .benefits-text h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .benefits-text h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 .benefits-text p {
@@ -63,49 +92,70 @@
   line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .benefits-text p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .benefits-text p {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
 .benefits-image {
   flex: 1;
-  height: 350px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #f8f9fa;
-  border-radius: 8px;
+  background-color: transparent;
+  border-radius: 0;
 }
 .benefits-image img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  height: 100%;
+  width: 100%;
+  font: inherit;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: baseline;
+  margin-block: 0px;
+  margin-inline: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0px;
+  font-size: 100%;
+  font-family: "Santander MicroText", sans-serif;
+  display: block;
 }
 @media (max-width: 1199px) {
   .benefits-image {
-    height: 300px;
+    height: 280px;
   }
 }
 @media (max-width: 767px) {
   .benefits-image {
-    height: 250px;
+    height: 220px;
   }
 }
 @media (max-width: 480px) {
   .benefits-image {
-    height: 220px;
+    height: 180px;
   }
 }
 @media (max-width: 360px) {
   .benefits-image {
-    height: 200px;
+    height: 150px;
   }
 }
 
@@ -130,13 +180,13 @@
 }
 @media (max-width: 767px) {
   .benefits-btn {
-    width: auto;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 
-/* DIGITAL BANKING SECTION  */
+/* DIGITAL BANKING SECTION */
 .digital-banking {
   padding: 80px 20px;
   background-color: #FFFFFF;
@@ -174,7 +224,11 @@
 
 .digital-content {
   flex: 1;
-  text-align: left;
+}
+@media (max-width: 1023px) {
+  .digital-content {
+    text-align: left;
+  }
 }
 .digital-content h2 {
   font-family: "Santander Headline", sans-serif;
@@ -183,12 +237,26 @@
   line-height: 2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 20px;
   color: #343A40;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .digital-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .digital-content h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .digital-content h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 .digital-content p {
@@ -198,10 +266,19 @@
   line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .digital-content p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .digital-content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -266,9 +343,9 @@
 }
 @media (max-width: 767px) {
   .digital-btn {
-    width: auto;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 
@@ -288,7 +365,6 @@
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 60px;
 }
@@ -297,10 +373,9 @@
     padding: 0 16px;
   }
 }
-@media (max-width: 1023px) {
+@media (min-width: 768px) {
   .security-container {
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: row;
   }
 }
 @media (max-width: 767px) {
@@ -321,12 +396,26 @@
   line-height: 2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 20px;
   color: #343A40;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .security-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .security-content h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .security-content h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 .security-content p {
@@ -336,10 +425,19 @@
   line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .security-content p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .security-content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -350,11 +448,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  background-color: transparent;
   border-radius: 0;
-  box-shadow: none;
+  background-color: transparent;
 }
 .security-image img {
   width: 100%;
@@ -406,9 +501,9 @@
 }
 @media (max-width: 767px) {
   .security-btn {
-    width: auto;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 
@@ -450,7 +545,11 @@
 
 .mobile-app-content {
   flex: 1;
-  text-align: left;
+}
+@media (max-width: 1023px) {
+  .mobile-app-content {
+    text-align: left;
+  }
 }
 .mobile-app-content h2 {
   font-family: "Santander Headline", sans-serif;
@@ -459,12 +558,26 @@
   line-height: 2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 20px;
   color: #343A40;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .mobile-app-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-app-content h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .mobile-app-content h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 .mobile-app-content p {
@@ -474,10 +587,19 @@
   line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
+  text-align: left;
 }
 @media (max-width: 767px) {
   .mobile-app-content p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .mobile-app-content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -535,6 +657,29 @@
 }
 @media (max-width: 767px) {
   .app-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font: inherit;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+    margin-block: 0px;
+    margin-inline: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 0px;
+    font-size: 100%;
+    font-family: "Santander MicroText", sans-serif;
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .app-buttons {
     gap: 12px;
   }
 }
@@ -545,8 +690,9 @@
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
-  width: 160px;
-  height: 48px;
+  width: 120px;
+  height: auto;
+  min-height: 54px;
 }
 .app-download-btn img {
   width: 100%;
@@ -561,40 +707,52 @@
 }
 @media (max-width: 1199px) {
   .app-download-btn {
-    width: 160px;
-    height: 48px;
+    width: 170px;
+    min-height: 51px;
   }
 }
 @media (max-width: 1023px) {
   .app-download-btn {
     width: 160px;
-    height: 48px;
+    min-height: 48px;
   }
 }
 @media (max-width: 767px) {
   .app-download-btn {
-    width: 140px;
-    height: 42px;
+    width: 150px;
+    min-height: 45px;
     max-width: 200px;
   }
 }
 @media (max-width: 480px) {
   .app-download-btn {
     width: 140px;
-    height: 42px;
+    min-height: 42px;
   }
 }
 @media (max-width: 360px) {
   .app-download-btn {
     width: 130px;
-    height: 39px;
+    min-height: 39px;
   }
 }
 
-/* MILESTONE SECTION*/
+/* MILESTONE SECTION */
 .milestone {
+  position: relative;
+  background: rgb(248, 247, 243);
+  font: inherit;
+  text-decoration: none;
+  margin: 0px;
   padding: 80px 20px;
-  background-color: #F5F7FA;
+  vertical-align: baseline;
+  margin-block: 0px;
+  margin-inline: 0px;
+  box-sizing: border-box;
+  border: 0px;
+  display: block;
+  font-size: 100%;
+  font-family: "Santander MicroText", sans-serif;
   color: #343A40;
 }
 @media (max-width: 767px) {
@@ -611,11 +769,6 @@
   align-items: center;
   gap: 50px;
 }
-@media (max-width: 767px) {
-  .milestone-container {
-    padding: 0 16px;
-  }
-}
 @media (max-width: 1023px) {
   .milestone-container {
     flex-direction: column;
@@ -624,13 +777,18 @@
 }
 @media (max-width: 767px) {
   .milestone-container {
+    padding: 0 16px;
     gap: 30px;
   }
 }
 
 .milestone-content {
   flex: 1;
-  text-align: left;
+}
+@media (max-width: 1023px) {
+  .milestone-content {
+    text-align: left;
+  }
 }
 
 .milestone-image {
@@ -640,9 +798,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 0;
 }
 .milestone-image img {
   width: 100%;
@@ -676,36 +833,107 @@
 .milestone-number {
   font-family: "Santander Headline", sans-serif;
   font-weight: 400;
-  font-size: 1.625rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 15px;
   color: #343A40;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+@media (max-width: 1199px) {
+  .milestone-number {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (max-width: 1023px) {
+  .milestone-number {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .milestone-number {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .milestone-number {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .milestone-number {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
 }
 
 .milestone-text {
   font-family: "Santander Headline", sans-serif;
   font-weight: 400;
-  font-size: 1.625rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 25px;
   color: #343A40;
+  margin-bottom: 0;
+}
+@media (max-width: 1199px) {
+  .milestone-text {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (max-width: 1023px) {
+  .milestone-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .milestone-text {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .milestone-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 360px) {
+  .milestone-text {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
 }
 
 .milestone-content p {
-  font-family: "Santander Headline", sans-serif;
+  font-family: "Santander Headline";
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 1.5rem;
   color: #6C757D;
+  text-align: left;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 @media (max-width: 767px) {
   .milestone-content p {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .milestone-content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -723,12 +951,7 @@
 .faq-container {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: left;
-}
-@media (min-width: 768px) {
-  .faq-container {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 .faq-title {
@@ -738,12 +961,26 @@
   line-height: 2rem;
   display: inline-block;
   padding-bottom: 0.5rem;
-  margin-bottom: 20px;
   color: #343A40;
+  margin-bottom: 20px;
 }
 @media (max-width: 767px) {
   .faq-title {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .faq-title {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+@media (max-width: 360px) {
+  .faq-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -754,11 +991,23 @@
   line-height: 1.5rem;
   color: #6C757D;
   margin-bottom: 30px;
+  text-align: left;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .faq-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .faq-subtitle {
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
 
@@ -777,9 +1026,6 @@
   background-color: #FFFFFF;
   color: #000000;
   margin-bottom: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 .faq-btn:hover {
   background-color: #F5F7FA;
@@ -787,41 +1033,13 @@
 }
 @media (max-width: 767px) {
   .faq-btn {
-    width: auto;
-    padding: 0.5rem 0.75rem;
-    font-size: 14px;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
   .faq-btn {
     margin-bottom: 30px;
   }
-}
-
-.faq-disclaimer {
-  padding: 30px 0;
-  font-size: 14px;
-  line-height: 1.7;
-  color: #343A40;
-  text-align: left;
-  margin-top: 30px;
-  border-top: 1px solid #F5F7FA;
-}
-@media (max-width: 767px) {
-  .faq-disclaimer {
-    padding: 20px 0;
-    font-size: 13px;
-  }
-}
-.faq-disclaimer a {
-  color: rgb(224, 0, 0);
-  text-decoration: none;
-  font-weight: 500;
-}
-.faq-disclaimer a:hover {
-  text-decoration: underline;
-  color: rgb(180, 0, 0);
-}
-.faq-disclaimer p {
-  margin-top: 15px;
 }/*# sourceMappingURL=sections.css.map */

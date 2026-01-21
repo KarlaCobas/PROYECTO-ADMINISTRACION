@@ -46,6 +46,10 @@ footer {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    
+    @media (max-width: v.$breakpoint-md) {
+        width: 140px;
+    }
 
     img {
         max-height: 30px;
@@ -57,7 +61,15 @@ footer {
         }
 
         @media (max-width: v.$breakpoint-md) {
-            max-height: 22px;
+            max-height: 24px !important;
+            height: 24px !important;
+            width: auto !important;
+            max-width: 140px !important;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            font-family: "Santander MicroText", sans-serif;
+            box-sizing: border-box;
         }
     }
 }
@@ -65,18 +77,20 @@ footer {
 .footer-links-row {
     display: flex;
     gap: 25px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-left: 0;
     padding-left: 0;
 
-    @media (max-width: v.$breakpoint-md) {
-        flex-wrap: wrap;
+    @media (max-width: v.$breakpoint-lg) {
         justify-content: flex-start;
-        gap: 20px 10px;
+        gap: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
         width: 100%;
-        & > a {
-            flex: 0 0 calc(50% - 10px);
-        }
     }
 
     a {
@@ -88,16 +102,29 @@ footer {
 
         @media (max-width: v.$breakpoint-md) {
             font-size: 13px;
+            white-space: normal;
         }
 
         &:hover {
             color: v.$white;
         }
     }
+
+    @media (max-width: v.$breakpoint-md) {
+        a:nth-child(5) {
+            grid-column: 1 / -1;
+            margin-top: 20px;
+            padding-top: 0;
+            padding-bottom: 15px;
+            border-top: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.925);
+            width: 100%;
+            text-align: left;
+        }
+    }
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 25px;
     text-align: center;
     font-size: 14px;

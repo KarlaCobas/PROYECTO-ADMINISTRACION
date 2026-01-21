@@ -35,28 +35,60 @@
 
 @mixin section-title {
     font-family: v.$font-headline;
-    font-weight: v.$font-weight-regular;
+    font-weight: 400;
     font-size: 1.625rem;
     line-height: 2rem;
     display: inline-block;
     padding-bottom: 0.5rem;
-    margin-bottom: 20px;
     color: v.$gray-dark;
+    margin-bottom: 20px;
 
     @media (max-width: v.$breakpoint-md) {
+        font-size: 1.5rem;
+        line-height: 1.875rem;
         margin-bottom: 15px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 }
 
-@mixin section-paragraph {
+@mixin section-subtitle {
     font-family: v.$font-headline;
-    font-weight: v.$font-weight-regular;
+    font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: v.$gray-medium;
     margin-bottom: 30px;
+    text-align: left;
 
     @media (max-width: v.$breakpoint-md) {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+@mixin section-paragraph {
+    font-size: 18px;
+    color: v.$gray-medium;
+    margin-bottom: 30px;
+    line-height: 1.6;
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 16px;
         margin-bottom: 20px;
     }
 }
@@ -82,9 +114,9 @@
     }
 
     @media (max-width: v.$breakpoint-md) {
-        width: auto;
-        padding: 0.5rem 0.75rem;
-        font-size: 14px;
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
     }
 }
 
@@ -100,8 +132,19 @@
 
 /* BENEFITS SECTION */
 .benefits {
+    display: grid;
+    margin: auto;
+    font: inherit;
+    text-decoration: none;
     padding: 80px 20px;
-    background-color: v.$white;
+    vertical-align: baseline;
+    margin-block: 0px;
+    margin-inline: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 0px;
+    font-size: 100%;
+    font-family: "Santander MicroText", sans-serif;
 
     @media (max-width: v.$breakpoint-md) {
         padding: 60px 16px;
@@ -129,27 +172,89 @@
 
 .benefits-text {
     flex: 1;
-    text-align: left;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: left;
+    }
 
     h2 {
         @include section-title;
     }
 
     p {
-        @include section-paragraph;
+        font-family: v.$font-headline;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: v.$gray-medium;
+        margin-bottom: 30px;
+        text-align: left;
+
+        @media (max-width: v.$breakpoint-md) {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: v.$breakpoint-sm) {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
 .benefits-image {
     flex: 1;
-    @include section-image;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 0;
+    
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        font: inherit;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        margin-block: 0px;
+        margin-inline: 0px;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 0px;
+        font-size: 100%;
+        font-family: "Santander MicroText", sans-serif;
+        display: block;
+    }
+
+    @media (max-width: v.$breakpoint-xxl) {
+        height: 280px;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        height: 220px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        height: 180px;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        height: 150px;
+    }
 }
 
 .benefits-btn {
     @include section-button;
 }
 
-/* DIGITAL BANKING SECTION  */
+/* DIGITAL BANKING SECTION */
 .digital-banking {
     padding: 80px 20px;
     background-color: v.$white;
@@ -177,14 +282,34 @@
 
 .digital-content {
     flex: 1;
-    text-align: left;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: left;
+    }
 
     h2 {
         @include section-title;
     }
 
     p {
-        @include section-paragraph;
+        font-family: v.$font-headline;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: v.$gray-medium;
+        margin-bottom: 30px;
+        text-align: left;
+
+        @media (max-width: v.$breakpoint-md) {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: v.$breakpoint-sm) {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
@@ -211,13 +336,11 @@
 .security-container {
     @include section-container;
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 60px;
 
-    @media (max-width: v.$breakpoint-lg) {
-        flex-direction: column;
-        gap: 40px;
+    @media (min-width: (v.$breakpoint-md + 1)) {
+        flex-direction: row;
     }
 
     @media (max-width: v.$breakpoint-md) {
@@ -235,16 +358,59 @@
     }
 
     p {
-        @include section-paragraph;
+        font-family: v.$font-headline;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: v.$gray-medium;
+        margin-bottom: 30px;
+        text-align: left;
+
+        @media (max-width: v.$breakpoint-md) {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: v.$breakpoint-sm) {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
 .security-image {
     flex: 1;
-    @include section-image;
-    background-color: transparent;
+    height: v.$image-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     border-radius: 0;
-    box-shadow: none;
+    background-color: transparent;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    @media (max-width: v.$breakpoint-xxl) {
+        height: v.$image-height-tablet;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        height: v.$image-height-mobile;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        height: v.$image-height-small;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        height: v.$image-height-xs;
+    }
 }
 
 .security-btn {
@@ -279,14 +445,34 @@
 
 .mobile-app-content {
     flex: 1;
-    text-align: left;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: left;
+    }
 
     h2 {
         @include section-title;
     }
 
     p {
-        @include section-paragraph;
+        font-family: v.$font-headline;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        color: v.$gray-medium;
+        margin-bottom: 30px;
+        text-align: left;
+
+        @media (max-width: v.$breakpoint-md) {
+            font-size: 1.125rem;
+            line-height: 1.375rem;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: v.$breakpoint-sm) {
+            font-size: 1rem;
+            line-height: 1.25rem;
+        }
     }
 }
 
@@ -308,6 +494,28 @@
     }
 
     @media (max-width: v.$breakpoint-md) {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 0.75rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font: inherit;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: baseline;
+        margin-block: 0px;
+        margin-inline: 0px;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 0px;
+        font-size: 100%;
+        font-family: "Santander MicroText", sans-serif;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
         gap: 12px;
     }
 }
@@ -318,8 +526,9 @@
     transition: all v.$transition-normal;
     border-radius: 8px;
     overflow: hidden;
-    width: 160px;
-    height: 48px;
+    width: 120px;
+    height: auto;
+    min-height: 54px;
 
     img {
         width: 100%;
@@ -334,36 +543,48 @@
     }
 
     @media (max-width: v.$breakpoint-xxl) {
-        width: 160px;
-        height: 48px;
+        width: 170px;
+        min-height: 51px;
     }
 
     @media (max-width: v.$breakpoint-lg) {
         width: 160px;
-        height: 48px;
+        min-height: 48px;
     }
 
     @media (max-width: v.$breakpoint-md) {
-        width: 140px;
-        height: 42px;
+        width: 150px;
+        min-height: 45px;
         max-width: 200px;
     }
 
     @media (max-width: v.$breakpoint-sm) {
         width: 140px;
-        height: 42px;
+        min-height: 42px;
     }
 
     @media (max-width: v.$breakpoint-xs) {
         width: 130px;
-        height: 39px;
+        min-height: 39px;
     }
 }
 
-/* MILESTONE SECTION*/
+/* MILESTONE SECTION */
 .milestone {
+    position: relative;
+    background: rgb(248, 247, 243);
+    font: inherit;
+    text-decoration: none;
+    margin: 0px;
     padding: 80px 20px;
-    background-color: v.$gray-light;
+    vertical-align: baseline;
+    margin-block: 0px;
+    margin-inline: 0px;
+    box-sizing: border-box;
+    border: 0px;
+    display: block;
+    font-size: 100%;
+    font-family: "Santander MicroText", sans-serif;
     color: v.$gray-dark;
 
     @media (max-width: v.$breakpoint-md) {
@@ -372,7 +593,9 @@
 }
 
 .milestone-container {
-    @include section-container;
+    max-width: v.$container-max-width;
+    margin: 0 auto;
+    padding: 0 v.$container-padding;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -383,47 +606,147 @@
     }
 
     @media (max-width: v.$breakpoint-md) {
+        padding: 0 v.$container-padding-mobile;
         gap: 30px;
     }
 }
 
 .milestone-content {
     flex: 1;
-    text-align: left;
+
+    @media (max-width: v.$breakpoint-lg) {
+        text-align: left;
+    }
 }
 
 .milestone-image {
     flex: 1;
-    @include section-image;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    height: v.$image-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    @media (max-width: v.$breakpoint-xxl) {
+        height: v.$image-height-tablet;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        height: v.$image-height-mobile;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        height: v.$image-height-small;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        height: v.$image-height-xs;
+    }
 }
 
 .milestone-number {
     font-family: v.$font-headline;
-    font-weight: v.$font-weight-regular;
-    font-size: 1.625rem;
-    line-height: 2rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3rem;
     display: inline-block;
     padding-bottom: 0.5rem;
-    margin-bottom: 15px;
     color: v.$gray-dark;
+    margin-bottom: 0;
+    margin-right: 10px;
+
+    @media (max-width: v.$breakpoint-xxl) {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
 }
 
 .milestone-text {
     font-family: v.$font-headline;
-    font-weight: v.$font-weight-regular;
-    font-size: 1.625rem;
-    line-height: 2rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3rem;
     display: inline-block;
     padding-bottom: 0.5rem;
-    margin-bottom: 25px;
     color: v.$gray-dark;
+    margin-bottom: 0;
+
+    @media (max-width: v.$breakpoint-xxl) {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
+
+    @media (max-width: v.$breakpoint-lg) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    @media (max-width: v.$breakpoint-xs) {
+        font-size: 1.375rem;
+        line-height: 1.75rem;
+    }
 }
 
 .milestone-content p {
-    @include section-paragraph;
-}
+    font-family: "Santander Headline";
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: v.$gray-medium;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
 
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
 /* FAQ SECTION */
 .faq {
     padding: 80px 20px;
@@ -437,11 +760,7 @@
 .faq-container {
     max-width: 1000px;
     margin: 0 auto;
-    text-align: left;
-
-    @media (min-width: (v.$breakpoint-md + 1)) {
-        text-align: center; 
-    }
+    text-align: center;
 }
 
 .faq-title {
@@ -449,49 +768,35 @@
 }
 
 .faq-subtitle {
-    @include section-paragraph;
+    font-family: v.$font-headline;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: v.$gray-medium;
+    margin-bottom: 30px;
+    text-align: left;
     max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @media (max-width: v.$breakpoint-md) {
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: v.$breakpoint-sm) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
 }
 
 .faq-btn {
     @include section-button;
     margin-bottom: 40px;
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
     @media (max-width: v.$breakpoint-md) {
         margin-bottom: 30px;
-    }
-}
-
-.faq-disclaimer {
-    padding: 30px 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: v.$gray-dark;
-    text-align: left;
-    margin-top: 30px;
-    border-top: 1px solid v.$gray-light;
-
-    @media (max-width: v.$breakpoint-md) {
-        padding: 20px 0;
-        font-size: 13px;
-    }
-
-    a {
-        color: v.$primary-red;
-        text-decoration: none;
-        font-weight: v.$font-weight-medium;
-
-        &:hover {
-            text-decoration: underline;
-            color: v.$secondary-red;
-        }
-    }
-
-    p {
-        margin-top: 15px;
     }
 }
